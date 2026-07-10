@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>c2cfa52f-459f-463e-ac06-f8d2a9a2f14e</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>CodeEffects.Rule.Docs</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)En\Api.Client.Init.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Api.Client.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Api.Net.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Attributes.Action.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Attributes.Data.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Attributes.EnumItem.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Attributes.ExcludeFromEvaluation.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Attributes.ExternalAction.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Attributes.ExternalMethod.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Attributes.Field.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Attributes.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Attributes.Method.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Attributes.Parameter.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Attributes.Parent.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Attributes.Return.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Attributes.Source.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.CollectionType.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.DataType.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.EvaluationMode.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.EvaluationParameters.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.EvaluationScope.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.ExcludedOperator.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.GetRuleDelegate.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.GetTypeDelegate.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.IFlexDataProvider.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.LinqProviderType.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.Operator.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.ParameterType.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.RuleElementType.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.SettingType.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.TracerDelegate.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.Models.ValueInputType.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Common.RuleException.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Client.Collection.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Client.Context.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Client.DataSource.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Client.DataSourceItem.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Client.Enum.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Client.Field.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Client.Function.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Client.Item.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Client.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Client.Pair.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Client.Parameter.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Client.Return.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Client.RuleSection.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Client.Settings.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Control.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.InvalidRuleException.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.MalformedXmlException.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Models.DataSourceHolder.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Models.GetDataSourceDelegate.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Models.GetSourceElementDelegate.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Models.IMenu.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Models.IMenuProvider.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Models.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Models.MenuItem.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Models.RuleModel.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Models.RuleSectionType.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Models.Source.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Models.SourceElementType.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.SourceException.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Utils.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Editor.Utils.Xml.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Engine.EvaluationException.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Engine.Evaluator.Generic.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Engine.Evaluator.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Engine.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Engine.RuleExtensions.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Basics.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.DataTypes.Nullables.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.DataTypes.Numerics.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Dmds.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Editor.Css.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Editor.CutCopyPaste.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Editor.Keyboard.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Editor.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Editor.Modes.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Editor.Settings.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Editor.Toolbar.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Evaluation.Aliases.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Evaluation.Inheritance.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Evaluation.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Evaluation.Tips.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Evaluation.Tracer.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Evaluation.Whitelisting.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Filtering.Ef.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Filtering.Linq.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Filtering.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.HowToObtain.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Implementation.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.ImplementationEditor.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.ImplementationEngine.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Prompts.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Rule.Evaluation.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Rule.Execution.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Rule.Management.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Rule.Reusable.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.Rule.Types.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.SourceObject.Adaptive.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.SourceObject.Class.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.SourceObject.ContextResetters.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.SourceObject.Flex.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.SourceObject.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.SourceObject.Regeneration.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\Ui.SourceObject.Xml.md" />
+    <None Include="$(MSBuildThisFileDirectory)En\UI.Version6.md" />
+    <None Include="$(MSBuildThisFileDirectory)README.md" />
+  </ItemGroup>
+</Project>
