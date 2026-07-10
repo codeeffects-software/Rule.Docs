@@ -6,7 +6,7 @@
 
 ## Summary
 
-Provides helper methods for processing and managing [Rule XML](/decision-automation/business-rules-storage) and [Source XML](/decision-automation/business-rule-source-object-xml).
+Provides helper methods for processing and managing [Rule XML](https://codeeffects.com/decision-automation/business-rules-storage) and [Source XML](https://codeeffects.com/decision-automation/business-rule-source-object-xml).
 
 ## Syntax
 
@@ -38,7 +38,7 @@ public static partial class Xml
 - ### GetEmptyRuleDocument<br/>
 	<small>Returns: `System.Xml.XmlDocument`</small>
 
-	Returns an empty `XmlDocument` containing only the root `<codeeffects>` element. This document can serve as the starting point for a [Rule XML](/decision-automation/business-rules-storage) when generating XML files dynamically.
+	Returns an empty `XmlDocument` containing only the root `<codeeffects>` element. This document can serve as the starting point for a [Rule XML](https://codeeffects.com/decision-automation/business-rules-storage) when generating XML files dynamically.
 
 	#### Parameters
 
@@ -51,7 +51,7 @@ public static partial class Xml
 - ### GetEmptySourceDocument<br/>
 	<small>Returns: `System.Xml.XmlDocument`</small>
 
-	Returns an empty `XmlDocument` containing only the root `<codeeffects>` element. This document can serve as the starting point for a [Source XML](/decision-automation/business-rule-source-object-xml) when generating XML files dynamically.
+	Returns an empty `XmlDocument` containing only the root `<codeeffects>` element. This document can serve as the starting point for a [Source XML](https://codeeffects.com/decision-automation/business-rule-source-object-xml) when generating XML files dynamically.
 
 	#### Parameters
 
@@ -64,7 +64,7 @@ public static partial class Xml
 - ### IsRuleValid<br/>
 	<small>Returns: `System.Boolean`</small>
 
-	Validates a [Rule XML](/decision-automation/business-rules-storage) document against the current schema and CodeEffects' internal validation logic.
+	Validates a [Rule XML](https://codeeffects.com/decision-automation/business-rules-storage) document against the current schema and CodeEffects' internal validation logic.
 
 	#### Parameters
 

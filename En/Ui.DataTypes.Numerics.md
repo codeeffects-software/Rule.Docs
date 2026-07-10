@@ -1,7 +1,7 @@
 ﻿
 # Automatic Numeric Type Conversion
 
-Code Effects performs automatic numeric type conversion during both [rule authoring](/decision-automation/business-rule-management) and [rule evaluation](/decision-automation/business-rule-evaluation). This allows rule authors to work with compatible [numeric values](/decision-automation/business-rules-data-types) without requiring exact CLR type matches in the underlying [source object](/decision-automation/business-rule-source-object).
+Code Effects performs automatic numeric type conversion during both [rule authoring](https://codeeffects.com/decision-automation/business-rule-management) and [rule evaluation](https://codeeffects.com/decision-automation/business-rule-evaluation). This allows rule authors to work with compatible [numeric values](https://codeeffects.com/decision-automation/business-rules-data-types) without requiring exact CLR type matches in the underlying [source object](https://codeeffects.com/decision-automation/business-rule-source-object).
 
 The platform applies numeric compatibility differently depending on how the value is used in a rule. Rule conditions are intentionally permissive, while in-rule method parameters, rule action parameters, value setters, collections, and arrays enforce stricter compatibility rules.
 
@@ -34,7 +34,7 @@ double >= decimal
 float = int
 ```
 
-When a rule condition is evaluated, the [`Evaluator`](/decision-automation/rule-engine-evaluator) casts both numeric operands to `decimal` and then applies the selected condition operator to the resulting decimal values.
+When a rule condition is evaluated, the [`Evaluator`](https://codeeffects.com/decision-automation/rule-engine-evaluator) casts both numeric operands to `decimal` and then applies the selected condition operator to the resulting decimal values.
 
 This approach works because all standard .NET numeric value types supported by Code Effects can be converted to `decimal`. As a result, rule authors can compare decimal and integral numeric values freely in conditions without needing exact type matches.
 
@@ -50,7 +50,7 @@ Numeric values used outside rule conditions follow stricter compatibility rules.
 
 In these cases, the selected value must be compatible with the target numeric type. The editor does not simply allow any numeric value of any numeric type.
 
-Each numeric rule element also exposes the `AllowDecimals` setting, which indicates whether the value can contain fractional components. In the [Reflection source model](/decision-automation/business-rule-source-object-class), the [Rule Editor](/decision-automation/business-rule-editor) derives this setting automatically from the CLR type of the underlying member, so there is no need to specify it explicitly using the [`Filed`](/decision-automation/rule-common-attributes-field) attribute) attribute. The editor uses this setting to prevent conversions that could discard the fractional part of a value and lead to a loss of precision.
+Each numeric rule element also exposes the `AllowDecimals` setting, which indicates whether the value can contain fractional components. In the [Reflection source model](https://codeeffects.com/decision-automation/business-rule-source-object-class), the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) derives this setting automatically from the CLR type of the underlying member, so there is no need to specify it explicitly using the [`Filed`](https://codeeffects.com/decision-automation/rule-common-attributes-field) attribute) attribute. The editor uses this setting to prevent conversions that could discard the fractional part of a value and lead to a loss of precision.
 
 For example, a value that allows decimal fractions is not offered where an integral value is required, because a value such as `12.5` cannot be safely converted to `int`, `long`, or `short` without losing the fractional part.
 
@@ -104,7 +104,7 @@ The Evaluator, however, performs the actual CLR numeric conversions when compili
 
 ## Important Considerations
 
-Automatic numeric conversion does not make Code Effects loosely typed. The Rule Editor prevents invalid selections during rule authoring whenever possible, and the [`Evaluator`](/decision-automation/rule-engine-evaluator) performs the required conversions only when the involved values satisfy the platform's compatibility requirements.
+Automatic numeric conversion does not make Code Effects loosely typed. The Rule Editor prevents invalid selections during rule authoring whenever possible, and the [`Evaluator`](https://codeeffects.com/decision-automation/rule-engine-evaluator) performs the required conversions only when the involved values satisfy the platform's compatibility requirements.
 
 Therefore, when this documentation refers to a specific numeric type, such as `decimal`, it should generally be understood as:
 

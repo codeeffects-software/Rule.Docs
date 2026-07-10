@@ -1,13 +1,13 @@
 ﻿
 # Nullable Value Support in Code Effects Platform
 
-Code Effects provides comprehensive support for nullable [value types](/decision-automation/business-rules-data-types) throughout [rule authoring](/decision-automation/business-rule-management) and [evaluation](/decision-automation/business-rule-evaluation). Nullable properties, fields, collection elements, method parameters, and method return values participate in rules in a natural and predictable manner, allowing rule authors to focus on business logic rather than the implementation details of the underlying data model.
+Code Effects provides comprehensive support for nullable [value types](https://codeeffects.com/decision-automation/business-rules-data-types) throughout [rule authoring](https://codeeffects.com/decision-automation/business-rule-management) and [evaluation](https://codeeffects.com/decision-automation/business-rule-evaluation). Nullable properties, fields, collection elements, method parameters, and method return values participate in rules in a natural and predictable manner, allowing rule authors to focus on business logic rather than the implementation details of the underlying data model.
 
-> **NOTE:** The nullable compatibility rules described in this article are applied in addition to Code Effects' automatic numeric type conversion. The rule engine automatically converts compatible numeric value types during evaluation, and the [Rule Editor](/decision-automation/business-rule-editor) uses the same logic when constructing menus.
+> **NOTE:** The nullable compatibility rules described in this article are applied in addition to Code Effects' automatic numeric type conversion. The rule engine automatically converts compatible numeric value types during evaluation, and the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) uses the same logic when constructing menus.
 >
 > Therefore, references in this article to types such as `decimal` or `decimal?` should be understood as shorthand for any numeric type that can be converted to those types. For example, a parameter declared as `decimal` can also accept values of types such as `short`, `int`, `long`, `float`, and `double`, provided they satisfy the nullable restrictions described in this article. Likewise, a `decimal?` parameter can accept both nullable and non-nullable numeric values that can be converted to `decimal?`.
 >
-> See [this article](/decision-automation/business-rules-automatic-numeric-type-conversion) for details about automatic numeric type conversion in Code Effects.
+> See [this article](https://codeeffects.com/decision-automation/business-rules-automatic-numeric-type-conversion) for details about automatic numeric type conversion in Code Effects.
 
 ## Fields, Properties, and Method Return Values
 

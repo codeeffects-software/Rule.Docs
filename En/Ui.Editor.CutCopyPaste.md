@@ -1,7 +1,7 @@
 ﻿
 # Cut, Copy, and Paste of Rule Elements
 
-The [Rule Editor](/decision-automation/business-rule-editor) supports cut, copy, and paste operations for individual rule elements as well as for entire groups of conditions. This allows rule authors to reorganize complex rules quickly without manually re-creating repeated logic.
+The [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) supports cut, copy, and paste operations for individual rule elements as well as for entire groups of conditions. This allows rule authors to reorganize complex rules quickly without manually re-creating repeated logic.
 
 To select one or more rule elements:
 

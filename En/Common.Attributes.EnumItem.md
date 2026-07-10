@@ -6,7 +6,7 @@
 
 ## Summary
 
-When applied to a member of an enumeration that is used by a [source object](/decision-automation/business-rule-source-object) as a rule field, this attribute specifies the display name for that member.
+When applied to a member of an enumeration that is used by a [source object](https://codeeffects.com/decision-automation/business-rule-source-object) as a rule field, this attribute specifies the display name for that member.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ public class EnumItemAttribute : System.Attribute,
 - ### DisplayName<br/>
 	<small>Type: `System.String`</small>
 
-	Gets or sets the display name of the enumeration member in the [Rule Editor](/decision-automation/business-rule-editor).
+	Gets or sets the display name of the enumeration member in the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor).
 
 ## Example
 

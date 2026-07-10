@@ -6,7 +6,7 @@
 
 ## Summary
 
-When applied to a member of the [source object](/decision-automation/business-rule-source-object), this attribute instructs [Rule Editor](/decision-automation/business-rule-editor) to ignore that member.
+When applied to a member of the [source object](https://codeeffects.com/decision-automation/business-rule-source-object), this attribute instructs [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) to ignore that member.
 
 ## Syntax
 

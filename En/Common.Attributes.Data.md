@@ -6,7 +6,7 @@
 
 ## Summary
 
-Defines a single reusable [Dynamic Menu Data Source](/decision-automation/business-rules-dynamic-menu-data-sources) on a [source object](/decision-automation/business-rule-source-object) level.
+Defines a single reusable [Dynamic Menu Data Source](https://codeeffects.com/decision-automation/business-rules-dynamic-menu-data-sources) on a [source object](https://codeeffects.com/decision-automation/business-rule-source-object) level.
 
 ## Syntax
 
@@ -22,7 +22,7 @@ public class DataAttribute : System.Attribute
 - ### Method<br/>
 	<small>Type: `System.String`</small>
 
-	Gets or sets the name of the method that provides the menu data source. This property is required. This must be a public parameterless method that returns an [`ICollection<DataSourceItem>`](/decision-automation/rule-editor-client-datasourceitem).
+	Gets or sets the name of the method that provides the menu data source. This property is required. This must be a public parameterless method that returns an [`ICollection<DataSourceItem>`](https://codeeffects.com/decision-automation/rule-editor-client-datasourceitem).
 
 - ### Name<br/>
 	<small>Type: `System.String`</small>
@@ -37,6 +37,6 @@ public class DataAttribute : System.Attribute
 - ### TypeOrAliasName<br/>
 	<small>Type: `System.String`</small>
 
-	Gets or sets the assembly-qualified name or [alias name](/decision-automation/business-rule-type-handling-and-tyle-alias-names) of the type that declares the data source method. This property is required if the `Type` property is not specified. You can obtain this name by executing `typeof(ClassName).AssemblyQualifiedName`.
+	Gets or sets the assembly-qualified name or [alias name](https://codeeffects.com/decision-automation/business-rule-type-handling-and-tyle-alias-names) of the type that declares the data source method. This property is required if the `Type` property is not specified. You can obtain this name by executing `typeof(ClassName).AssemblyQualifiedName`.
 
 </div>

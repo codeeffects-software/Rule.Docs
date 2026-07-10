@@ -1,7 +1,7 @@
 ﻿
 # Code Effects Data Filtering
 
-The Data Filtering feature of Code Effects extends traditional rule evaluation beyond simple decision logic. It allows you to use any [evaluation type](/decision-automation/business-rule-evaluation-type) rule as a dynamic predicate for LINQ queries, effectively transforming human-authored business rules into executable query filters.
+The Data Filtering feature of Code Effects extends traditional rule evaluation beyond simple decision logic. It allows you to use any [evaluation type](https://codeeffects.com/decision-automation/business-rule-evaluation-type) rule as a dynamic predicate for LINQ queries, effectively transforming human-authored business rules into executable query filters.
 
 This feature enables seamless reuse of the same rule definitions both for evaluating single data objects and for filtering large datasets, such as those retrieved from databases, entity models, or in-memory collections.
 
@@ -9,7 +9,7 @@ This feature enables seamless reuse of the same rule definitions both for evalua
 
 In typical decision automation systems, rules are executed only as boolean evaluators: a given object either meets the defined conditions or not. Code Effects goes further by allowing those same conditions to drive data selection operations.
 
-When a rule evaluates to `true` for a specific object, that object satisfies the rule’s logic and can be included in a query result. The `Filter(..)` [extension method](/decision-automation/rule-engine-ruleextensions) automatically converts the [XML definition](/decision-automation/business-rules-storage) of a rule into a LINQ expression that represents the same logical condition tree.
+When a rule evaluates to `true` for a specific object, that object satisfies the rule’s logic and can be included in a query result. The `Filter(..)` [extension method](https://codeeffects.com/decision-automation/rule-engine-ruleextensions) automatically converts the [XML definition](https://codeeffects.com/decision-automation/business-rules-storage) of a rule into a LINQ expression that represents the same logical condition tree.
 
 To understand the concept intuitively, consider this simple rule:
 
@@ -76,7 +76,7 @@ When used with `IQueryable<T>`, Code Effects automatically generates an expressi
 
 No configuration changes or special adapters are required: the same Rule XML can be used interchangeably across both types of sources.
 
-For obvious reasons, the `Filter(..)` method works only with [evaluation type](/decision-automation/business-rule-evaluation-type) rules, since [execution type](/decision-automation/business-rule-execution-type) rules can modify field values or trigger actions and therefore cannot be represented as pure expressions.
+For obvious reasons, the `Filter(..)` method works only with [evaluation type](https://codeeffects.com/decision-automation/business-rule-evaluation-type) rules, since [execution type](https://codeeffects.com/decision-automation/business-rule-execution-type) rules can modify field values or trigger actions and therefore cannot be represented as pure expressions.
 
 ## Performance and Optimization
 
@@ -112,7 +112,7 @@ This simple code snippet enables dynamic, user-defined queries that can change a
 
 ## Live Demonstration
 
-You can explore a live demonstration of Code Effects data filtering. The demo showcases how an end-user can visually author rules in the [Rule Editor](/decision-automation/business-rule-editor) and immediately apply them as filters to Entity Framework data source, all without writing or modifying a single line of code.
+You can explore a live demonstration of Code Effects data filtering. The demo showcases how an end-user can visually author rules in the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) and immediately apply them as filters to Entity Framework data source, all without writing or modifying a single line of code.
 
 ## Summary
 

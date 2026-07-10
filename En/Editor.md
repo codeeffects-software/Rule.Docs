@@ -5,7 +5,7 @@
 
 Contains the following types:
 
-- [`Control`](/decision-automation/rule-editor-control)
-- [`InvalidRuleException`](/decision-automation/rule-editor-invalidruleexception)
-- [`MalformedXmlException`](/decision-automation/rule-editor-malformedxmlexception)
-- [`SourceException`](/decision-automation/rule-editor-sourceexception)
+- [`Control`](https://codeeffects.com/decision-automation/rule-editor-control)
+- [`InvalidRuleException`](https://codeeffects.com/decision-automation/rule-editor-invalidruleexception)
+- [`MalformedXmlException`](https://codeeffects.com/decision-automation/rule-editor-malformedxmlexception)
+- [`SourceException`](https://codeeffects.com/decision-automation/rule-editor-sourceexception)

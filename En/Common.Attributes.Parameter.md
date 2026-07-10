@@ -6,11 +6,11 @@
 
 ## Summary
 
-**IMPORTANT NOTE #1** Generic methods that declare generic array (not collection) parameters cannot be used as [in-rule methods or rule actions](/decision-automation).
+**IMPORTANT NOTE #1** Generic methods that declare generic array (not collection) parameters cannot be used as [in-rule methods or rule actions](https://codeeffects.com/decision-automation).
 
-**IMPORTANT NOTE #2** Generic methods with generic params cannot be used in [Source XML](/decision-automation/business-rule-source-object-xml) source model as in-rule methods or rule actions. Use [Reflection](/decision-automation/business-rule-source-object-class) model if your [source object](/decision-automation/business-rule-source-object) declares generic methods.
+**IMPORTANT NOTE #2** Generic methods with generic params cannot be used in [Source XML](https://codeeffects.com/decision-automation/business-rule-source-object-xml) source model as in-rule methods or rule actions. Use [Reflection](https://codeeffects.com/decision-automation/business-rule-source-object-class) model if your [source object](https://codeeffects.com/decision-automation/business-rule-source-object) declares generic methods.
 
-If applied to a parameter of a qualified method, marks that parameter as a rule action or in-rule method parameter. To qualify, the parameter must be of the source object type, any [value type](/decision-automation/business-rules-data-types) supported by Code Effects, or a [collection](/decision-automation/business-rules-collection-data-types). Methods that declare non-qualified parameters are ignored by Rule Editor.
+If applied to a parameter of a qualified method, marks that parameter as a rule action or in-rule method parameter. To qualify, the parameter must be of the source object type, any [value type](https://codeeffects.com/decision-automation/business-rules-data-types) supported by Code Effects, or a [collection](https://codeeffects.com/decision-automation/business-rules-collection-data-types). Methods that declare non-qualified parameters are ignored by Rule Editor.
 
 ## Syntax
 
@@ -26,17 +26,17 @@ public class ParameterAttribute : System.Attribute, CodeEffects.Rule.Common.Attr
 - ### CollectionItemType<br/>
 	<small>Type: `System.Type`</small>
 
-	Used only with qualified parameters of non-generic [collection types](/decision-automation/business-rules-collection-data-types) whose underlying element type cannot be determined at run time (qualified collections). This property is ignored for parameters of all other types and for generic collections. Gets or sets the underlying element type of the qualified collection. Examples of qualified collections include `System.Collections.Specialized.StringCollection` and `System.Collections.ArrayList`. This property is optional. The entire method is ignored if the value of this property is not set for any qualified parameter of a qualified collection type.
+	Used only with qualified parameters of non-generic [collection types](https://codeeffects.com/decision-automation/business-rules-collection-data-types) whose underlying element type cannot be determined at run time (qualified collections). This property is ignored for parameters of all other types and for generic collections. Gets or sets the underlying element type of the qualified collection. Examples of qualified collections include `System.Collections.Specialized.StringCollection` and `System.Collections.ArrayList`. This property is optional. The entire method is ignored if the value of this property is not set for any qualified parameter of a qualified collection type.
 
 - ### DataSourceName<br/>
 	<small>Type: `System.String`</small>
 
-	Used only with rule action or in-rule method parameters of `System.Int32` type and ignored for parameters of other types. Gets or sets the unique name of the [dynamic menu data source](/decision-automation/business-rules-dynamic-menu-data-sources) declared by the [`SourceAttribute`](/decision-automation/rule-common-attributes-source) on the [source object](/decision-automation/business-rule-source-object). When set, the rule author can select a value only from the list of items provided by the specified data source method.
+	Used only with rule action or in-rule method parameters of `System.Int32` type and ignored for parameters of other types. Gets or sets the unique name of the [dynamic menu data source](https://codeeffects.com/decision-automation/business-rules-dynamic-menu-data-sources) declared by the [`SourceAttribute`](https://codeeffects.com/decision-automation/rule-common-attributes-source) on the [source object](https://codeeffects.com/decision-automation/business-rule-source-object). When set, the rule author can select a value only from the list of items provided by the specified data source method.
 
 - ### DateTimeFormat<br/>
 	<small>Type: `System.String`</small>
 
-	Used only with qualified parameters of date and time [types](/decision-automation/business-rules-data-types) and ignored for parameters of other types. Gets or sets the display format of the qualified parameter. Supports standard .NET date and time format strings. This property is optional and not used during rule evaluation. The default date format is `MMM dd, yyyy`, and the default time format is `hh:mm tt`.
+	Used only with qualified parameters of date and time [types](https://codeeffects.com/decision-automation/business-rules-data-types) and ignored for parameters of other types. Gets or sets the display format of the qualified parameter. Supports standard .NET date and time format strings. This property is optional and not used during rule evaluation. The default date format is `MMM dd, yyyy`, and the default time format is `hh:mm tt`.
 
 	**<em>Remarks</em>**
 
@@ -52,8 +52,8 @@ public class ParameterAttribute : System.Attribute, CodeEffects.Rule.Common.Attr
 	}
 	```
 
-	![Date picker](/resources/images/doc/editordatepickertime3.png)<br>
-	![Date picker](/resources/images/doc/editordatepickertime4.png)
+	![Date picker](https://codeeffects.com/resources/images/doc/editordatepickertime3.png)<br>
+	![Date picker](https://codeeffects.com/resources/images/doc/editordatepickertime4.png)
 
 	```csharp
 	[Action(DisplayName = "Set Schedule")]
@@ -63,13 +63,13 @@ public class ParameterAttribute : System.Attribute, CodeEffects.Rule.Common.Attr
 	}
 	```
 
-	![Date picker](/resources/images/doc/editordatepickertime5.png)<br>
-	![Date picker](/resources/images/doc/editordatepickertime6.png)
+	![Date picker](https://codeeffects.com/resources/images/doc/editordatepickertime5.png)<br>
+	![Date picker](https://codeeffects.com/resources/images/doc/editordatepickertime6.png)
 
 - ### Description<br/>
 	<small>Type: `System.String`</small>
 
-	Gets or sets the description of the parameter. Rule authors can view this description by hovering the mouse pointer over the parameter element in the [Rule Editor](/decision-automation/business-rule-editor). The value of this property is ignored if `Control.ShowDescriptionsOnMouseHover` is set to `false`. It is not recommended to use this property in [multilingual applications](/decision-automation/business-rule-multilingual-support); instead, use culture-specific custom [Source XML](/decision-automation/business-rule-source-object-xml) documents. This property is optional.
+	Gets or sets the description of the parameter. Rule authors can view this description by hovering the mouse pointer over the parameter element in the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor). The value of this property is ignored if `Control.ShowDescriptionsOnMouseHover` is set to `false`. It is not recommended to use this property in [multilingual applications](https://codeeffects.com/decision-automation/business-rule-multilingual-support); instead, use culture-specific custom [Source XML](https://codeeffects.com/decision-automation/business-rule-source-object-xml) documents. This property is optional.
 
 - ### Filter<br/>
 	<small>Type: `System.String`</small>
@@ -101,7 +101,7 @@ public class ParameterAttribute : System.Attribute, CodeEffects.Rule.Common.Attr
 	```
 	With this source object, a user could pass both email and phone number values as the `SavePhone` parameter. Although all those fields are of the `System.String` type, they clearly represent unrelated data:
 
-	![Collection item](/resources/images/doc/filterfive.png)
+	![Collection item](https://codeeffects.com/resources/images/doc/filterfive.png)
 
 	Let’s separate these fields and the `SavePhone` parameter into two filters: <b>email</b> and <b>phone</b>:
 
@@ -134,12 +134,12 @@ public class ParameterAttribute : System.Attribute, CodeEffects.Rule.Common.Attr
 	```
 	Now, users can pass only phone numbers as the parameter to the rule action that expects phone numbers:
 
-	![Collection item](/resources/images/doc/filtersix.png)
+	![Collection item](https://codeeffects.com/resources/images/doc/filtersix.png)
 
 - ### Max<br/>
 	<small>Type: `System.Int64`</small>
 
-	Used only with qualified parameters of numeric and string types, and ignored by parameters of [other types](/decision-automation/business-rules-data-types). For numeric parameters, gets or sets the maximum value that rule authors can enter manually. For string parameters, gets or sets the maximum length of the string that rule authors can type as the value. Setting this property has no effect on rule evaluation. This property is optional.
+	Used only with qualified parameters of numeric and string types, and ignored by parameters of [other types](https://codeeffects.com/decision-automation/business-rules-data-types). For numeric parameters, gets or sets the maximum value that rule authors can enter manually. For string parameters, gets or sets the maximum length of the string that rule authors can type as the value. Setting this property has no effect on rule evaluation. This property is optional.
 
 	- Max value for numeric types allowed by the editor: `2147483647`
 	- Max length for string types allowed by the editor: `256`
@@ -147,7 +147,7 @@ public class ParameterAttribute : System.Attribute, CodeEffects.Rule.Common.Attr
 - ### Min<br/>
 	<small>Type: `System.Int64`</small>
 
-	Used only with qualified parameters of numeric type, and ignored by parameters of [other types](/decision-automation/business-rules-data-types). Gets or sets the minimum value that rule authors can enter manually for the qualified parameter. Setting this property has no effect on rule evaluation. This property is optional. The minimum value allowed by the editor is `-2147483648`.
+	Used only with qualified parameters of numeric type, and ignored by parameters of [other types](https://codeeffects.com/decision-automation/business-rules-data-types). Gets or sets the minimum value that rule authors can enter manually for the qualified parameter. Setting this property has no effect on rule evaluation. This property is optional. The minimum value allowed by the editor is `-2147483648`.
 
 - ### ValueInputType<br/>
 	<small>Type: `CodeEffects.Rule.Common.Models.ValueInputType`</small>

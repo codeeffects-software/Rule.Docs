@@ -1,18 +1,18 @@
 ﻿
 # Evaluation Type Rules
 
-> Returns a boolean result without executing actions. Supports [Rule-Based Data Filtering](/decision-automation/business-rule-data-filtering).
+> Returns a boolean result without executing actions. Supports [Rule-Based Data Filtering](https://codeeffects.com/decision-automation/business-rule-data-filtering).
 
 ## Purpose
 
-Evaluate a condition tree against a [source object](/decision-automation/business-rule-source-object) and produce a boolean decision. Typical uses include eligibility checks, segmentation, routing, pricing tiers, KYC/AML gates, underwriting criteria, and feature flags.
+Evaluate a condition tree against a [source object](https://codeeffects.com/decision-automation/business-rule-source-object) and produce a boolean decision. Typical uses include eligibility checks, segmentation, routing, pricing tiers, KYC/AML gates, underwriting criteria, and feature flags.
 
 ## Engine Behavior
 
 - Compiles the rule into a predicate over the source type; evaluation yields `true` or `false`.
 - Supports Data Filtering: apply the same rule as a LINQ predicate via `Filter(..)` method to filter `IEnumerable<T>` / `IQueryable<T>` sources.
-- Supports [Reusable Rules](/decision-automation/business-rules-reusable); circular references are blocked by automatic validation built into the [Rule Editor](/decision-automation/business-rule-editor).
-- Authoring/evaluation semantics are identical whether the source surface comes from a [.NET class](/decision-automation/business-rule-source-object-class), [Source XML](/decision-automation/business-rule-source-object-xml), or [FlexSource](/decision-automation/business-rule-flex-source).
+- Supports [Reusable Rules](https://codeeffects.com/decision-automation/business-rules-reusable); circular references are blocked by automatic validation built into the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor).
+- Authoring/evaluation semantics are identical whether the source surface comes from a [.NET class](https://codeeffects.com/decision-automation/business-rule-source-object-class), [Source XML](https://codeeffects.com/decision-automation/business-rule-source-object-xml), or [FlexSource](https://codeeffects.com/decision-automation/business-rule-flex-source).
 
 ## C# - Single Evaluation
 

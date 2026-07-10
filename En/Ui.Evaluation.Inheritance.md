@@ -1,7 +1,7 @@
 ﻿
 # Rule Evaluation and Object Inheritance
 
-The Code Effects business rules engine supports evaluating descendant [source object](/decision-automation/business-rule-source-object). To illustrate this concept, create one base class and two classes that inherit from it:
+The Code Effects business rules engine supports evaluating descendant [source object](https://codeeffects.com/decision-automation/business-rule-source-object). To illustrate this concept, create one base class and two classes that inherit from it:
 
 ```csharp
 using System;
@@ -28,7 +28,7 @@ public class MySourceTwo : MyBase
 }
 ```
 
-Assume we also have an [evaluation type](/decision-automation/business-rule-evaluation-type) rule that uses only the base class’ fields, like this:
+Assume we also have an [evaluation type](https://codeeffects.com/decision-automation/business-rule-evaluation-type) rule that uses only the base class’ fields, like this:
 
 > Check if ID is greater than 0 and Name starts with A
 

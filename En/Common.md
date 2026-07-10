@@ -5,4 +5,4 @@
 
 Contains the following types:
 
-- [`RuleException`](/decision-automation/rule-common-ruleexception)
+- [`RuleException`](https://codeeffects.com/decision-automation/rule-common-ruleexception)

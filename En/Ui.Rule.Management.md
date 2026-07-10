@@ -42,7 +42,7 @@ Here’s what’s required to use Code Effects in your own product or as a stand
 1. **Define your source object(s).**  
    Create the <b>class</b> or <b>Source XML</b> document that represents the data type your rules will evaluate.  
    Many organizations already have such models.  
-   You can even generate them dynamically at runtime with our [FlexSource technology](/decision-automation/business-rule-flex-source) if your data structure is stored in a database. The possibilities are nearly limitless.
+   You can even generate them dynamically at runtime with our [FlexSource technology](https://codeeffects.com/decision-automation/business-rule-flex-source) if your data structure is stored in a database. The possibilities are nearly limitless.
 
 2. **Decide where rules are evaluated.**  
    Choose which of your systems will host rule evaluation.  
@@ -54,7 +54,7 @@ Here’s what’s required to use Code Effects in your own product or as a stand
    What happens to those rules—who can access them, which ones are deployed to production, how they’re versioned, secured, or approved—is entirely up to you.  
    Code Effects gives you the authoring and evaluation capabilities; you build or update your system(s) that manage rule storage, security, and lifecycle.  
    Typical implementations store and retrieve rules in a database, apply versioning or access control, and deploy selected versions to production.  
-   Our [demo projects](/decision-automation/demo-projects) include complete working examples.
+   Our [demo projects](https://codeeffects.com/decision-automation/demo-projects) include complete working examples.
 
 ---
 

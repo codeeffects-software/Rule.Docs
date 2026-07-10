@@ -6,7 +6,7 @@
 
 ## Summary
 
-This exception is thrown when the [Rule Editor](/decision-automation/business-rule-editor) or the [Rule Engine](/decision-automation/business-rule-evaluation) encounters an invalid [Rule XML](/decision-automation/business-rules-storage) document.
+This exception is thrown when the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) or the [Rule Engine](https://codeeffects.com/decision-automation/business-rule-evaluation) encounters an invalid [Rule XML](https://codeeffects.com/decision-automation/business-rules-storage) document.
 
 ## Syntax
 
@@ -18,5 +18,5 @@ public class InvalidRuleException : CodeEffects.Rule.Common.RuleException
 
 - `System.Object`
 	- `System.Exception`
-		- [`CodeEffects.Rule.Common.RuleException`](/decision-automation/rule-common-ruleexception)
+		- [`CodeEffects.Rule.Common.RuleException`](https://codeeffects.com/decision-automation/rule-common-ruleexception)
 			- **CodeEffects.Rule.Editor.InvalidRuleException**

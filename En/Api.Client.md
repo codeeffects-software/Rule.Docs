@@ -13,7 +13,7 @@
 
 	#### Remarks
 
-	The **Code Effects Rule Editor** provides a powerful, modular client-side interface that integrates seamlessly with any modern web application. It enables users to visually create, edit, and manage business rules directly in the browser, while your server-side code handles rule evaluation through the [Code Effects Rule Engine](/decision-automation/business-rule-evaluation).
+	The **Code Effects Rule Editor** provides a powerful, modular client-side interface that integrates seamlessly with any modern web application. It enables users to visually create, edit, and manage business rules directly in the browser, while your server-side code handles rule evaluation through the [Code Effects Rule Engine](https://codeeffects.com/decision-automation/business-rule-evaluation).
 
 	The editor is implemented as a **self-contained JavaScript library** that exposes a compact set of public functions via two global variables — `$rule` and `$ce` — while encapsulating all other logic within its internal scope. This makes it completely safe to add the editor to any environment without risking conflicts with existing scripts, frameworks, or global objects.
 
@@ -65,13 +65,13 @@
 - ### $rule.init(..)<br/>
 	<small>Returns: (`Object`) - Newly created instance of Rule Editor</small>
 
-	This method initializes and returns an instance of the [rule editor](/decision-automation/business-rule-editor) on the client. For details about editor initialization, please refer to the dedicated documentation article [available here](/decision-automation/business-rule-editor-client-initialization).
+	This method initializes and returns an instance of the [rule editor](https://codeeffects.com/decision-automation/business-rule-editor) on the client. For details about editor initialization, please refer to the dedicated documentation article [available here](https://codeeffects.com/decision-automation/business-rule-editor-client-initialization).
 
 	#### Parameters
 
 	<div class="params">
 
-	- *settings* (`String`) - JSON string received from the `GetInitialSettings()` method of the [`CodeEffects.Rule.Editor.Control`](/decision-automation/rule-editor-control) .NET class. This parameter is required.
+	- *settings* (`String`) - JSON string received from the `GetInitialSettings()` method of the [`CodeEffects.Rule.Editor.Control`](https://codeeffects.com/decision-automation/rule-editor-control) .NET class. This parameter is required.
 
 	</div>
 
@@ -134,7 +134,7 @@
 - ### deleted(..)<br/>
 	<small>Returns: (`Object`) - Rule Editor instance</small>
 
-	Calling this function after deleting a rule is necessary to clear editor's cache and remove the deleted rule from the Rules menu (if the [Toolbar](/decision-automation/business-rule-toolbar) is displayed) and context menus.
+	Calling this function after deleting a rule is necessary to clear editor's cache and remove the deleted rule from the Rules menu (if the [Toolbar](https://codeeffects.com/decision-automation/business-rule-toolbar) is displayed) and context menus.
 
 	#### Parameters
 
@@ -230,7 +230,7 @@
 - ### isEvaluationType()<br/>
 	<small>Returns: (`Boolean`)</small>
 
-	Returns `true` if the loaded rule is of the [evaluation type](/decision-automation/business-rule-evaluation-type) or if the rule author selected the New evaluation-type rule option from the Rules menu of the [Toolbar](/decision-automation/business-rule-toolbar). This function does not check which rule elements the author has added to the Rule Area so far.
+	Returns `true` if the loaded rule is of the [evaluation type](https://codeeffects.com/decision-automation/business-rule-evaluation-type) or if the rule author selected the New evaluation-type rule option from the Rules menu of the [Toolbar](https://codeeffects.com/decision-automation/business-rule-toolbar). This function does not check which rule elements the author has added to the Rule Area so far.
 
 	#### Parameters
 
@@ -262,7 +262,7 @@
 
 	<div class="params">
 
-	- *data* (`String`) - JSON string received from the `GetClientInvalidData()` method of the [`CodeEffects.Rule.Editor.Control`](/decision-automation/rule-editor-control) .NET class. Fork the related [demo project](/decision-automation/business-rules-engine-demo-project) to see how to load invalid rule data into the Rule Editor. This parameter is required.
+	- *data* (`String`) - JSON string received from the `GetClientInvalidData()` method of the [`CodeEffects.Rule.Editor.Control`](https://codeeffects.com/decision-automation/rule-editor-control) .NET class. Fork the related [demo project](https://codeeffects.com/decision-automation/business-rules-engine-demo-project) to see how to load invalid rule data into the Rule Editor. This parameter is required.
 
 	</div>
 
@@ -275,27 +275,27 @@
 
 	<div class="params">
 
-	- *data* (`String`) - JSON string received from the `GetClientRuleData()` method of the [`CodeEffects.Rule.Editor.Control`](/decision-automation/rule-editor-control) .NET class. This parameter is required.de
+	- *data* (`String`) - JSON string received from the `GetClientRuleData()` method of the [`CodeEffects.Rule.Editor.Control`](https://codeeffects.com/decision-automation/rule-editor-control) .NET class. This parameter is required.de
 
 	</div>
 
 - ### loadSettings(..)<br/>
 	<small>Returns: (`Object`) – Rule Editor instance</small>
 
-	Call this function to load the Rule Editor client settings. You should also call it whenever the rule author changes any of the editor’s settings, such as the visibility of the [Toolbar](/decision-automation/business-rule-toolbar), [Help String](/decision-automation/business-rule-editor), and similar options.
+	Call this function to load the Rule Editor client settings. You should also call it whenever the rule author changes any of the editor’s settings, such as the visibility of the [Toolbar](https://codeeffects.com/decision-automation/business-rule-toolbar), [Help String](https://codeeffects.com/decision-automation/business-rule-editor), and similar options.
 
 	#### Parameters
 
 	<div class="params">
 
-	- *data* (`String`) - JSON string received from the `GetClientSettings()` method of the [`CodeEffects.Rule.Editor.Control`](/decision-automation/rule-editor-control) .NET class. This parameter is required.
+	- *data* (`String`) - JSON string received from the `GetClientSettings()` method of the [`CodeEffects.Rule.Editor.Control`](https://codeeffects.com/decision-automation/rule-editor-control) .NET class. This parameter is required.
 
 	</div>
 
 - ### saved(..)<br/>
 	<small>Returns: (`Object`) – Rule Editor instance</small>
 
-	Call this function after saving a new rule or updating an existing one to refresh the Rules menu of the [Toolbar](/decision-automation/business-rule-toolbar) and context menus of the editor with the new or updated values.
+	Call this function after saving a new rule or updating an existing one to refresh the Rules menu of the [Toolbar](https://codeeffects.com/decision-automation/business-rule-toolbar) and context menus of the editor with the new or updated values.
 
 	#### Parameters
 
@@ -308,7 +308,7 @@
 - ### setClientActions(..)<br/>
 	<small>Returns: (`Object`) – Rule Editor instance</small>
 
-	Call this function during page initialization to specify which functions the Rule Editor should call when the rule author wants to load, delete, or save a rule. Do not call it if the [Toolbar](/decision-automation/business-rule-toolbar) is disabled.
+	Call this function during page initialization to specify which functions the Rule Editor should call when the rule author wants to load, delete, or save a rule. Do not call it if the [Toolbar](https://codeeffects.com/decision-automation/business-rule-toolbar) is disabled.
 
 	#### Parameters
 
@@ -316,6 +316,6 @@
 
 	- *loadCallback* (`Function`) - Callback function that handles loading a rule. This function must declare a single parameter of type `string`. The Rule Editor calls this function and passes it the rule ID when the rule author selects that rule from the Toolbar’s Rules menu. This parameter is required.
 	- *deleteCallback* (`Function`) - Callback function that handles deleting a rule. This function must declare a single parameter of type `string`. The Rule Editor calls this function and passes it the rule ID when the rule author clicks the Delete button on the Toolbar. This parameter is required.
-	- *saveCallback* (`Function`) - Callback function that handles saving a rule. This function must declare a single parameter of type `object`. The Rule Editor calls this function and passes it an object containing the rule data when the rule author clicks the Save button on the Toolbar. This callback works in tandem with the `LoadClientData()` method of the [`CodeEffects.Rule.Editor.Control`](/decision-automation/rule-editor-control) .NET class. This parameter is required.
+	- *saveCallback* (`Function`) - Callback function that handles saving a rule. This function must declare a single parameter of type `object`. The Rule Editor calls this function and passes it an object containing the rule data when the rule author clicks the Save button on the Toolbar. This callback works in tandem with the `LoadClientData()` method of the [`CodeEffects.Rule.Editor.Control`](https://codeeffects.com/decision-automation/rule-editor-control) .NET class. This parameter is required.
 
 	</div>

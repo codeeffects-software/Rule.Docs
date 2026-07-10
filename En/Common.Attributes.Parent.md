@@ -6,7 +6,7 @@
 
 ## Summary
 
-Gets or sets the display name of the public non-static property of a [value type](/decision-automation/business-rules-data-types) or of a field of a reference type declared in the [source object](/decision-automation/business-rule-source-object).
+Gets or sets the display name of the public non-static property of a [value type](https://codeeffects.com/decision-automation/business-rules-data-types) or of a field of a reference type declared in the [source object](https://codeeffects.com/decision-automation/business-rule-source-object).
 
 ## Syntax
 
@@ -22,17 +22,17 @@ public class ParentAttribute : System.Attribute, CodeEffects.Rule.Common.Attribu
 - ### Description<br/>
 	<small>Type: `System.String`</small>
 
-	Gets or sets the description of the rule field. Rule authors can see this description when they hover the mouse pointer over the field element in the [Rule Editor](/decision-automation/business-rule-editor). The value of this property is ignored if `Control.ShowDescriptionsOnMouseHover` is set to `false`. It is not advisable to use this property in [multilingual applications](/decision-automation/business-rule-multilingual-support); instead, use culture-specific custom [Source XML](/decision-automation/business-rule-source-object-xml) documents. This property is optional.
+	Gets or sets the description of the rule field. Rule authors can see this description when they hover the mouse pointer over the field element in the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor). The value of this property is ignored if `Control.ShowDescriptionsOnMouseHover` is set to `false`. It is not advisable to use this property in [multilingual applications](https://codeeffects.com/decision-automation/business-rule-multilingual-support); instead, use culture-specific custom [Source XML](https://codeeffects.com/decision-automation/business-rule-source-object-xml) documents. This property is optional.
 
 - ### DisplayName<br/>
 	<small>Type: `System.String`</small>
 
-	Gets or sets the display name of the rule field in the Rule Editor. Use this property to represent rule fields in the Rule Area when the property name is not sufficiently descriptive for non-technical rule authors. It is not recommended to use this property in [multilingual applications](/decision-automation/business-rule-multilingual-support); instead, use culture-specific custom [Source XML](/decision-automation/business-rule-source-object-xml) documents. This property is optional. The default value is the declared name of the property.
+	Gets or sets the display name of the rule field in the Rule Editor. Use this property to represent rule fields in the Rule Area when the property name is not sufficiently descriptive for non-technical rule authors. It is not recommended to use this property in [multilingual applications](https://codeeffects.com/decision-automation/business-rule-multilingual-support); instead, use culture-specific custom [Source XML](https://codeeffects.com/decision-automation/business-rule-source-object-xml) documents. This property is optional. The default value is the declared name of the property.
 
 - ### ParentName<br/>
 	<small>Type: `System.String`</small>
 
-	Gets or sets the name of the **parent** property declared in the [source object](/decision-automation/business-rule-source-object). See the remarks below for details on this feature.
+	Gets or sets the name of the **parent** property declared in the [source object](https://codeeffects.com/decision-automation/business-rule-source-object). See the remarks below for details on this feature.
 
 </div>
 
@@ -60,9 +60,9 @@ namespace TestLibrary
 
 Code Effects Rule Editor uses dot notation to display the default field names of reference types in the Rule Area. If the `Company` class is used as the source object, the fields menu will appear as follows:
 
-![Parent Attribute](/resources/images/doc/editorparent1.png)
+![Parent Attribute](https://codeeffects.com/resources/images/doc/editorparent1.png)
 
-While this may be acceptable for internal solutions, you will likely want to assign meaningful display names to the rule fields to make the experience easier for business users. However, simply setting the `DisplayName` parameter of the [`FieldAttribute`](/decision-automation/rule-common-attributes-field) on each `Address` field...
+While this may be acceptable for internal solutions, you will likely want to assign meaningful display names to the rule fields to make the experience easier for business users. However, simply setting the `DisplayName` parameter of the [`FieldAttribute`](https://codeeffects.com/decision-automation/rule-common-attributes-field) on each `Address` field...
 
 ```csharp
 [Field(DisplayName = "Street Address")]
@@ -102,4 +102,4 @@ namespace TestLibrary
 
 Run the editor with this version of the `Company` class as the source object to see the difference:
 
-![Parent Attribute](/resources/images/doc/editorparent2.png)
+![Parent Attribute](https://codeeffects.com/resources/images/doc/editorparent2.png)

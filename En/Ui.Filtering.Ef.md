@@ -1,11 +1,11 @@
 ﻿
 # T-SQL Auto-Generation with EF Core
 
-This topic assumes that you already understand how to [manage](/decision-automation/business-rule-management) business rules in Code Effects. In [Rule-Based Data Filtering](/decision-automation/business-rule-data-filtering), [evaluation type](/decision-automation/business-rule-evaluation-type) rules are used as <em>filters</em>; [execution type](/decision-automation/business-rule-execution-type) rules are not used in this scenario. Any time this article refers to a <em>filter</em>, it means an evaluation type rule that has been created in the [Rule Editor](/decision-automation/business-rule-editor) using its `Filter` [mode](/decision-automation/business-rule-editor-modes) and saved as [Rule XML](/decision-automation/business-rules-storage).
+This topic assumes that you already understand how to [manage](https://codeeffects.com/decision-automation/business-rule-management) business rules in Code Effects. In [Rule-Based Data Filtering](https://codeeffects.com/decision-automation/business-rule-data-filtering), [evaluation type](https://codeeffects.com/decision-automation/business-rule-evaluation-type) rules are used as <em>filters</em>; [execution type](https://codeeffects.com/decision-automation/business-rule-execution-type) rules are not used in this scenario. Any time this article refers to a <em>filter</em>, it means an evaluation type rule that has been created in the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) using its `Filter` [mode](https://codeeffects.com/decision-automation/business-rule-editor-modes) and saved as [Rule XML](https://codeeffects.com/decision-automation/business-rules-storage).
 
 The core principles of using Code Effects data filtering with EF Core are implemented in the <em>Data Filtering</em> [demo project](https://github.com/orgs/codeeffects-software/repositories).
 
-Using Code Effects, you can attach rule-based data filters (the equivalent of `WHERE` clauses) of arbitrary complexity to your LINQ queries. The examples below show how to apply these filters to Entity Framework Core queries. The same pattern is used by the `Filter(..)` [extension method](/decision-automation/rule-engine-ruleextensions) for rule-based data filtering.
+Using Code Effects, you can attach rule-based data filters (the equivalent of `WHERE` clauses) of arbitrary complexity to your LINQ queries. The examples below show how to apply these filters to Entity Framework Core queries. The same pattern is used by the `Filter(..)` [extension method](https://codeeffects.com/decision-automation/rule-engine-ruleextensions) for rule-based data filtering.
 
 > In all examples, assume that `filterXml` var holds the XML of a previously saved evaluation type rule and that you have added a reference to the `Code.Effects.Engine.dll` assembly and `using CodeEffects.Rule.Engine;` directive.
 
@@ -50,7 +50,7 @@ Because `Filter(..)` returns an `IQueryable<T>`, no code executes until the sequ
 
 ## Applying Filters to EF Core Queries
 
-The main benefit of Code Effects [data filtering](/decision-automation/business-rule-data-filtering) appears when filters are applied to EF Core queries. EF Core translates the combined query (your LINQ expression together with the rule-based predicate) into T-SQL and executes that SQL on the database server.
+The main benefit of Code Effects [data filtering](https://codeeffects.com/decision-automation/business-rule-data-filtering) appears when filters are applied to EF Core queries. EF Core translates the combined query (your LINQ expression together with the rule-based predicate) into T-SQL and executes that SQL on the database server.
 
 Assume a standard EF Core context:
 
@@ -166,9 +166,9 @@ This approach ensures that the filter remains independent of your projection whi
 
 ## Null Handling
 
-By default, the `Filter(..)` [extension method](/decision-automation/rule-engine-ruleextensions) performs strict `null` checking during rule evaluation. If a rule tries to access a member of a `null` object, the default behavior is to throw an exception to indicate that the data surface path is invalid for the given record.
+By default, the `Filter(..)` [extension method](https://codeeffects.com/decision-automation/rule-engine-ruleextensions) performs strict `null` checking during rule evaluation. If a rule tries to access a member of a `null` object, the default behavior is to throw an exception to indicate that the data surface path is invalid for the given record.
 
-To instead use standard C# `null` semantics, where accessing a nested property on a `null` reference simply returns `null` and the rule evaluates to `false`, you must call the overload of `Filter(..)` that accepts an [`EvaluationParameters`](/decision-automation/rule-common-models-evaluationparameters) object and set its `PerformNullChecks` property to `false`.
+To instead use standard C# `null` semantics, where accessing a nested property on a `null` reference simply returns `null` and the rule evaluates to `false`, you must call the overload of `Filter(..)` that accepts an [`EvaluationParameters`](https://codeeffects.com/decision-automation/rule-common-models-evaluationparameters) object and set its `PerformNullChecks` property to `false`.
 
 Example:
 
@@ -192,7 +192,7 @@ This behavior is often useful when filtering data that may contain optional or p
 
 ## Notes and Limitations
 
-- <b>Translation limits</b>. Code Effects produces a valid LINQ expression tree, but EF Core may not translate <b>every</b> .NET operation in that tree. Some constructs may require modification of the rule or [in-memory evaluation](/decision-automation/business-rule-linq-to-object-support).
+- <b>Translation limits</b>. Code Effects produces a valid LINQ expression tree, but EF Core may not translate <b>every</b> .NET operation in that tree. Some constructs may require modification of the rule or [in-memory evaluation](https://codeeffects.com/decision-automation/business-rule-linq-to-object-support).
 - <b>Case sensitivity</b>. String comparison behavior depends on your database collation.
 - <b>Query debugging</b>. Use `ToQueryString()` to view the SQL for a particular query. Use `LogTo(..)` for broader logging during development.
 - <b>Deferred execution</b>. `Filter(..)` does not execute the query; it only appends a predicate to the expression tree. Execution occurs when the query is enumerated.
@@ -201,7 +201,7 @@ This behavior is often useful when filtering data that may contain optional or p
 
 In EF Core, Code Effects `Filter(..)` integrates seamlessly with the provider:
 
-- [Evaluation type](/decision-automation/business-rule-evaluation-type) rules are created and stored as [XML](/decision-automation/business-rules-storage) using the [Rule Editor](/decision-automation/business-rule-editor).
+- [Evaluation type](https://codeeffects.com/decision-automation/business-rule-evaluation-type) rules are created and stored as [XML](https://codeeffects.com/decision-automation/business-rules-storage) using the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor).
 - `Filter(..)` converts rule XML into a LINQ expression tree and attaches it to an `IQueryable<T>`.
 - EF Core translates the combined query into T-SQL, including joins for navigation properties.
 - The database server executes the filtered query, and only matching records are returned.

@@ -8,7 +8,7 @@
 
 ## Summary
 
-Provides a way to specify collection-related settings for [Fields](/decision-automation/rule-editor-client-field), [Parameters](/decision-automation/rule-editor-client-parameter), and [Return](/decision-automation/rule-editor-client-return) values of [collection types](/decision-automation/business-rules-collection-data-types) in [Adaptive Source](/decision-automation/business-rule-adaptive-source).
+Provides a way to specify collection-related settings for [Fields](https://codeeffects.com/decision-automation/rule-editor-client-field), [Parameters](https://codeeffects.com/decision-automation/rule-editor-client-parameter), and [Return](https://codeeffects.com/decision-automation/rule-editor-client-return) values of [collection types](https://codeeffects.com/decision-automation/business-rules-collection-data-types) in [Adaptive Source](https://codeeffects.com/decision-automation/business-rule-adaptive-source).
 
 > This class is intended exclusively for use with the Adaptive Source model.
 
@@ -25,7 +25,7 @@ public class Collection
 - ### ComparisonName<br/>
 	<small>Type: `System.String`</small>
 
-	The generic type definition name of the collection. The [Rule Editor](/decision-automation/business-rule-editor) uses this value to determine whether the collection can be compared with other collections defined in the [Source](/decision-automation/rule-editor-models-source), hence the name of this property. You can obtain this value from the type of your collection field, parameter, or return value by executing the following code:
+	The generic type definition name of the collection. The [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) uses this value to determine whether the collection can be compared with other collections defined in the [Source](https://codeeffects.com/decision-automation/rule-editor-models-source), hence the name of this property. You can obtain this value from the type of your collection field, parameter, or return value by executing the following code:
 
 	```csharp
 	Type constructed = typeof(ICollection<MyType>).GetGenericTypeDefinition();
@@ -33,7 +33,7 @@ public class Collection
 	```
 
 - ### DataType<br/>
-	<small>Type: [CodeEffects.Rule.Common.Models.DataType](/decision-automation/rule-common-models-datatype)</small>
+	<small>Type: [CodeEffects.Rule.Common.Models.DataType](https://codeeffects.com/decision-automation/rule-common-models-datatype)</small>
 
 	The data type of the underlying class of the collection. This value should be only used in value-typed collections. The default value is `DataType.None`.
 
@@ -65,7 +65,7 @@ public class Collection
 - ### UnderlyingTypeName<br/>
 	<small>Type: `System.String`</small>
 
-	The assembly-qualified name or [alias](/decision-automation/business-rule-type-handling-and-tyle-alias-names) of the collection's underlying type. This property is ignored for [generic collections](/decision-automation/business-rules-collection-data-types).
+	The assembly-qualified name or [alias](https://codeeffects.com/decision-automation/business-rule-type-handling-and-tyle-alias-names) of the collection's underlying type. This property is ignored for [generic collections](https://codeeffects.com/decision-automation/business-rules-collection-data-types).
 
 	#### Example
 

@@ -6,7 +6,7 @@
 
 ## Summary
 
-Represents a menu item used by the [Dynamic Menu Data Sources](/decision-automation/business-rules-dynamic-menu-data-sources) feature.
+Represents a menu item used by the [Dynamic Menu Data Sources](https://codeeffects.com/decision-automation/business-rules-dynamic-menu-data-sources) feature.
 
 ## Syntax
 
@@ -36,7 +36,7 @@ public class DataSourceItem : IFilterable
 - ### Filter<br/>
 	<small>Type: `System.String`</small>
 
-	Gets or sets the string value used by the Dynamic Menu Data Sources feature to filter out all `DataSourceItem` menu items whose `Name` value does not match the specified filter value. This property works together with the `Filter` values of the [`FieldAttribute`](/decision-automation/rule-common-attributes-field), [`ParameterAttribute`](/decision-automation/rule-common-attributes-parameter), and [`MethodAttribute`](/decision-automation/rule-common-attributes-method) classes.
+	Gets or sets the string value used by the Dynamic Menu Data Sources feature to filter out all `DataSourceItem` menu items whose `Name` value does not match the specified filter value. This property works together with the `Filter` values of the [`FieldAttribute`](https://codeeffects.com/decision-automation/rule-common-attributes-field), [`ParameterAttribute`](https://codeeffects.com/decision-automation/rule-common-attributes-parameter), and [`MethodAttribute`](https://codeeffects.com/decision-automation/rule-common-attributes-method) classes.
 
 	```csharp
 	using CodeEffects.Rule.Common.Attributes;
@@ -76,7 +76,7 @@ public class DataSourceItem : IFilterable
 	}
 	```
 
-	![Numeric Calculation](/resources/images/doc/editormenuitems1.png)
+	![Numeric Calculation](https://codeeffects.com/resources/images/doc/editormenuitems1.png)
 
 </div>
 

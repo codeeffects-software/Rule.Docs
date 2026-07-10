@@ -3,11 +3,11 @@
 
 ## Rulesets
 
-The Code Effects [rules engine](/decision-automation/business-rule-evaluation) is *extremely* fast. We have demonstrated evaluating an array of ONE MILLION randomly filled objects against an [evaluation type](/decision-automation/business-rule-types) rule in a single thread in less than 10 milliseconds (0.010 sec).
+The Code Effects [rules engine](https://codeeffects.com/decision-automation/business-rule-evaluation) is *extremely* fast. We have demonstrated evaluating an array of ONE MILLION randomly filled objects against an [evaluation type](https://codeeffects.com/decision-automation/business-rule-types) rule in a single thread in less than 10 milliseconds (0.010 sec).
 
-Even though [performance is excellent](/content/high-performance-business-rules-engine), it still makes sense to optimize your evaluations where possible.
+Even though [performance is excellent](https://codeeffects.com/content/high-performance-business-rules-engine), it still makes sense to optimize your evaluations where possible.
 
-The most expensive operation is compiling your rule(s) during initialization of the [`Evaluator`](/decision-automation/rule-engine-evaluator-generic) class. If you need to evaluate multiple rules against the same data, you can combine them into a single ruleset by inserting them into an empty XML document and passing that ruleset as your [RuleXML](/decision-automation/business-rules-storage) to the `Evaluator` constructor:
+The most expensive operation is compiling your rule(s) during initialization of the [`Evaluator`](https://codeeffects.com/decision-automation/rule-engine-evaluator-generic) class. If you need to evaluate multiple rules against the same data, you can combine them into a single ruleset by inserting them into an empty XML document and passing that ruleset as your [RuleXML](https://codeeffects.com/decision-automation/business-rules-storage) to the `Evaluator` constructor:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

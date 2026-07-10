@@ -6,7 +6,7 @@
 
 ## Summary
 
-Represents the mode in which the [Rule Editor](/decision-automation/business-rule-editor) creates, and the [Rule Engine](/decision-automation/business-rule-evaluation) evaluates, business rules.
+Represents the mode in which the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) creates, and the [Rule Engine](https://codeeffects.com/decision-automation/business-rule-evaluation) evaluates, business rules.
 
 ## Syntax
 
@@ -23,4 +23,4 @@ public enum EvaluationMode
 
 ## Remarks
 
-See the [Rule Editor Modes](/decision-automation/business-rule-editor-modes) topic for details on the use of the `EvaluationMode` enumeration.
+See the [Rule Editor Modes](https://codeeffects.com/decision-automation/business-rule-editor-modes) topic for details on the use of the `EvaluationMode` enumeration.

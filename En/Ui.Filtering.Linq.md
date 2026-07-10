@@ -1,17 +1,17 @@
 ﻿
 # Rule-Based Data Filtering Using LINQ to Objects
 
-This topic describes how to use Code Effects to filter any in-memory collection of objects using [evaluation type](/decision-automation/business-rule-evaluation-type) rules created in the [Rule Editor](/decision-automation/business-rule-editor). This feature is based on the standard <em>LINQ to Objects</em> provider built into .NET and requires no special configuration. It works with any `IEnumerable<T>` value, whether the data originates from a database, an API, a file, or any other custom source.
+This topic describes how to use Code Effects to filter any in-memory collection of objects using [evaluation type](https://codeeffects.com/decision-automation/business-rule-evaluation-type) rules created in the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor). This feature is based on the standard <em>LINQ to Objects</em> provider built into .NET and requires no special configuration. It works with any `IEnumerable<T>` value, whether the data originates from a database, an API, a file, or any other custom source.
 
 All examples below assume that:
 
-- the rule was created in the Rule Editor using its Filter [mode](/decision-automation/business-rule-editor-modes),
-- the rule was saved as [Rule XML](/decision-automation/business-rules-storage), and
+- the rule was created in the Rule Editor using its Filter [mode](https://codeeffects.com/decision-automation/business-rule-editor-modes),
+- the rule was saved as [Rule XML](https://codeeffects.com/decision-automation/business-rules-storage), and
 - the variable `ruleXml` contains that XML.
 
 ## Overview
 
-The `Filter(..)` [extension method](/decision-automation/rule-engine-ruleextensions) allows you to apply a rule to any in-memory sequence by converting [Rule XML](/decision-automation/business-rules-storage) into a LINQ predicate expression and filtering your objects accordingly.
+The `Filter(..)` [extension method](https://codeeffects.com/decision-automation/rule-engine-ruleextensions) allows you to apply a rule to any in-memory sequence by converting [Rule XML](https://codeeffects.com/decision-automation/business-rules-storage) into a LINQ predicate expression and filtering your objects accordingly.
 
 Example:
 
@@ -46,15 +46,15 @@ This example prints only the products whose `ListPrice` is greater than `999`. T
 
 ## Deferred vs. Immediate Execution
 
-LINQ to Objects is evaluated immediately when the `Filter(..)` method is applied, because the underlying provider (`Enumerable`) executes eagerly. This differs from [EF Core queries](/decision-automation/business-rule-sql-auto-generation-entity-framework), which are translated into SQL and executed only when enumerated.
+LINQ to Objects is evaluated immediately when the `Filter(..)` method is applied, because the underlying provider (`Enumerable`) executes eagerly. This differs from [EF Core queries](https://codeeffects.com/decision-automation/business-rule-sql-auto-generation-entity-framework), which are translated into SQL and executed only when enumerated.
 
 This behavior is identical to other LINQ-to-Objects operations such as `.Where()`, `.Select()`, and `.OrderBy()`.
 
 ## Null Handling
 
-By default, the `Filter(..)` [extension method](/decision-automation/rule-engine-ruleextensions) performs null checks during rule evaluation. If a rule attempts to access a member of a null object, the default behavior is to throw an exception, ensuring that rule authors are notified of potentially invalid data paths.
+By default, the `Filter(..)` [extension method](https://codeeffects.com/decision-automation/rule-engine-ruleextensions) performs null checks during rule evaluation. If a rule attempts to access a member of a null object, the default behavior is to throw an exception, ensuring that rule authors are notified of potentially invalid data paths.
 
-To use standard C# null semantics, where evaluating a nested property on a null object simply returns `null` and the rule evaluates to `false`, you must call the overload of `Filter(..)` that accepts an [`EvaluationParameters`](/decision-automation/rule-common-models-evaluationparameters) instance and set its `PerformNullChecks` property to `false`.
+To use standard C# null semantics, where evaluating a nested property on a null object simply returns `null` and the rule evaluates to `false`, you must call the overload of `Filter(..)` that accepts an [`EvaluationParameters`](https://codeeffects.com/decision-automation/rule-common-models-evaluationparameters) instance and set its `PerformNullChecks` property to `false`.
 
 Example:
 

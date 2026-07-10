@@ -31,6 +31,10 @@ Currently available in **English**. Additional languages will be added under the
 
 The live, browsable version of this documentation is available at [codeeffects.com/decision-automation](https://codeeffects.com/decision-automation).
 
+## Remarks
+
+Name your fork `CodeEffects.Rule.Docs` if you plan to clone it locally and run it in Visual Studio as a shared project. All necessary project files have already been created.
+
 ## Feedback
 
 Found an error or something unclear? Open an issue in this repo - corrections and suggestions are welcome.

@@ -33,7 +33,7 @@ namespace CodeEffects.Rule.Editor.Models
 
 ## Summary
 
-Provides the server-side contract used by [Adaptive Source](/decision-automation/business-rule-adaptive-source) to supply fields, methods, setters, actions, reusable rules, enumerations, and dynamic menu data sources to the [Rule Editor](/decision-automation/business-rule-editor) on demand.
+Provides the server-side contract used by [Adaptive Source](https://codeeffects.com/decision-automation/business-rule-adaptive-source) to supply fields, methods, setters, actions, reusable rules, enumerations, and dynamic menu data sources to the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) on demand.
 
 ## Properties
 
@@ -42,14 +42,14 @@ Provides the server-side contract used by [Adaptive Source](/decision-automation
 - ### SourceObjectTypeOrAliasName<br/>
 	<small>Type: `System.String`</small>
 
-	Gets the assembly-qualified type name or [alias name](/decision-automation/business-rule-type-handling-and-tyle-alias-names) of the source object used by the rules. Required.
+	Gets the assembly-qualified type name or [alias name](https://codeeffects.com/decision-automation/business-rule-type-handling-and-tyle-alias-names) of the source object used by the rules. Required.
 
 ## Methods
 
 - ### GetAction<br/>
-	<small>Returns: [`CodeEffects.Rule.Editor.Client.Function`](/decision-automation/rule-editor-client-function)</small>
+	<small>Returns: [`CodeEffects.Rule.Editor.Client.Function`](https://codeeffects.com/decision-automation/rule-editor-client-function)</small>
 
-	Returns metadata for a rule action referenced by a rule. The editor calls this method when it needs to resolve an action method used by an [execution type rule](/decision-automation/business-rule-execution-type).
+	Returns metadata for a rule action referenced by a rule. The editor calls this method when it needs to resolve an action method used by an [execution type rule](https://codeeffects.com/decision-automation/business-rule-execution-type).
 
 	#### Parameters
 
@@ -60,7 +60,7 @@ Provides the server-side contract used by [Adaptive Source](/decision-automation
 	</div>
 
 - ### GetEnum<br/>
-	<small>Returns: [`CodeEffects.Rule.Editor.Client.Enum`](/decision-automation/rule-editor-client-enum)</small>
+	<small>Returns: [`CodeEffects.Rule.Editor.Client.Enum`](https://codeeffects.com/decision-automation/rule-editor-client-enum)</small>
 
 	Returns metadata for an enumeration used by a field, method parameter, or method return value. Adaptive Source does not require the editor to reflect enum types at design time. Your menu provider supplies the enum metadata when the editor requests it.
 
@@ -73,9 +73,9 @@ Provides the server-side contract used by [Adaptive Source](/decision-automation
 	</div>
 
 - ### GetDataSource<br/>
-	<small>Returns: [`CodeEffects.Rule.Editor.Client.DataSource`](/decision-automation/rule-editor-client-datasource)</small>
+	<small>Returns: [`CodeEffects.Rule.Editor.Client.DataSource`](https://codeeffects.com/decision-automation/rule-editor-client-datasource)</small>
 
-	Returns metadata for a [dynamic menu data source](/decision-automation/business-rules-dynamic-menu-data-sources). These data sources can be loaded from any source available to your application, including databases, APIs, configuration files, or cached metadata.
+	Returns metadata for a [dynamic menu data source](https://codeeffects.com/decision-automation/business-rules-dynamic-menu-data-sources). These data sources can be loaded from any source available to your application, including databases, APIs, configuration files, or cached metadata.
 
 	#### Parameters
 
@@ -86,9 +86,9 @@ Provides the server-side contract used by [Adaptive Source](/decision-automation
 	</div>
 
 - ### GetField<br/>
-	<small>Returns: [`CodeEffects.Rule.Editor.Client.Field`](/decision-automation/rule-editor-client-field)</small>
+	<small>Returns: [`CodeEffects.Rule.Editor.Client.Field`](https://codeeffects.com/decision-automation/rule-editor-client-field)</small>
 
-	Returns metadata for a field referenced by a rule. The editor calls this method when it needs to resolve a field by name, usually while loading or updating existing [RuleXML](/decision-automation/business-rules-storage).
+	Returns metadata for a field referenced by a rule. The editor calls this method when it needs to resolve a field by name, usually while loading or updating existing [RuleXML](https://codeeffects.com/decision-automation/business-rules-storage).
 
 	#### Parameters
 
@@ -99,21 +99,21 @@ Provides the server-side contract used by [Adaptive Source](/decision-automation
 	</div>
 
 - ### GetFieldsAndMethods<br/>
-	<small>Returns: [`CodeEffects.Rule.Editor.Models.IMenu`](/decision-automation/rule-editor-models-imenu)</small>
+	<small>Returns: [`CodeEffects.Rule.Editor.Models.IMenu`](https://codeeffects.com/decision-automation/rule-editor-models-imenu)</small>
 
-	Returns [fields](/decision-automation/rule-editor-client-field) and [in-rule methods](/decision-automation/rule-editor-client-function) that should be available in the next condition menu.
+	Returns [fields](https://codeeffects.com/decision-automation/rule-editor-client-field) and [in-rule methods](https://codeeffects.com/decision-automation/rule-editor-client-function) that should be available in the next condition menu.
 
 	#### Parameters
 
 	<div class="params">
 
-	- *context* ([`CodeEffects.Rule.Editor.Client.Context`](/decision-automation/rule-editor-client-context)) - Provides the current rule context and can be used to decide what should appear in the next menu.
+	- *context* ([`CodeEffects.Rule.Editor.Client.Context`](https://codeeffects.com/decision-automation/rule-editor-client-context)) - Provides the current rule context and can be used to decide what should appear in the next menu.
 
 	</div>
 
 
 - ### GetMethod<br/>
-	<small>Returns: [`CodeEffects.Rule.Editor.Client.Function`](/decision-automation/rule-editor-client-function)</small>
+	<small>Returns: [`CodeEffects.Rule.Editor.Client.Function`](https://codeeffects.com/decision-automation/rule-editor-client-function)</small>
 
 	Returns metadata for an in-rule method referenced by a rule. The editor calls this method when it needs to resolve an in-rule method by name.
 
@@ -126,9 +126,9 @@ Provides the server-side contract used by [Adaptive Source](/decision-automation
 	</div>
 
 - ### GetReusableRule<br/>
-	<small>Returns: [`CodeEffects.Rule.Editor.Client.Field`](/decision-automation/rule-editor-client-field)</small>
+	<small>Returns: [`CodeEffects.Rule.Editor.Client.Field`](https://codeeffects.com/decision-automation/rule-editor-client-field)</small>
 
-	Returns metadata for a [reusable rule](/decision-automation/business-rules-reusable). Reusable rules are exposed to the editor as `Boolean` fields. The `ruleID` parameter identifies the reusable [evaluation type](/decision-automation/business-rule-evaluation-type) rule that should be loaded into the menu or resolved from [RuleXML](/decision-automation/business-rules-storage).
+	Returns metadata for a [reusable rule](https://codeeffects.com/decision-automation/business-rules-reusable). Reusable rules are exposed to the editor as `Boolean` fields. The `ruleID` parameter identifies the reusable [evaluation type](https://codeeffects.com/decision-automation/business-rule-evaluation-type) rule that should be loaded into the menu or resolved from [RuleXML](https://codeeffects.com/decision-automation/business-rules-storage).
 
 	#### Parameters
 
@@ -139,22 +139,22 @@ Provides the server-side contract used by [Adaptive Source](/decision-automation
 	</div>
 
 - ### GetSettersAndActions<br/>
-	<small>Returns: [`CodeEffects.Rule.Editor.Models.IMenu`](/decision-automation/rule-editor-models-imenu)</small>
+	<small>Returns: [`CodeEffects.Rule.Editor.Models.IMenu`](https://codeeffects.com/decision-automation/rule-editor-models-imenu)</small>
 
-	Returns [setters](/decision-automation/rule-editor-client-field) and [rule actions](/decision-automation/rule-editor-client-function) that should be available in the next action menu.
+	Returns [setters](https://codeeffects.com/decision-automation/rule-editor-client-field) and [rule actions](https://codeeffects.com/decision-automation/rule-editor-client-function) that should be available in the next action menu.
 
 	#### Parameters
 
 	<div class="params">
 
-	- *context* ([`CodeEffects.Rule.Editor.Client.Context`](/decision-automation/rule-editor-client-context)) - Provides the current rule context and can be used to decide what should appear in the next menu.
+	- *context* ([`CodeEffects.Rule.Editor.Client.Context`](https://codeeffects.com/decision-automation/rule-editor-client-context)) - Provides the current rule context and can be used to decide what should appear in the next menu.
 
 	</div>
 
 - ### GetSetter<br/>
-	<small>Returns: [`CodeEffects.Rule.Editor.Client.Field`](/decision-automation/rule-editor-client-field)</small>
+	<small>Returns: [`CodeEffects.Rule.Editor.Client.Field`](https://codeeffects.com/decision-automation/rule-editor-client-field)</small>
 
-	Returns metadata for a settable field referenced by a rule. The editor calls this method when it needs to resolve a field used as a value setter. The returned field should represent a field that can be assigned a value by an [execution type rule](/decision-automation/business-rule-execution-type).
+	Returns metadata for a settable field referenced by a rule. The editor calls this method when it needs to resolve a field used as a value setter. The returned field should represent a field that can be assigned a value by an [execution type rule](https://codeeffects.com/decision-automation/business-rule-execution-type).
 
 	#### Parameters
 
@@ -168,7 +168,7 @@ Provides the server-side contract used by [Adaptive Source](/decision-automation
 
 ## Remarks
 
-`IMenuProvider` is the main implementation point of Adaptive Source. To use Adaptive Source, create a class that implements this interface and assign its instance to the [`Control.MenuProvider`](/decision-automation/rule-editor-control) property:
+`IMenuProvider` is the main implementation point of Adaptive Source. To use Adaptive Source, create a class that implements this interface and assign its instance to the [`Control.MenuProvider`](https://codeeffects.com/decision-automation/rule-editor-control) property:
 
 ```csharp
 var editor = new Control("divEditor");
@@ -180,11 +180,11 @@ Setting the `MenuProvider` property tells the editor to use the Adaptive Source 
 The provider has two main responsibilities:
 
 - Generate dynamic menus based on the current rule context.
-- Resolve existing rule elements referenced by [RuleXML](/decision-automation/business-rules-storage).
+- Resolve existing rule elements referenced by [RuleXML](https://codeeffects.com/decision-automation/business-rules-storage).
 
 This allows the editor to work without loading the entire source object into the browser.
 
-> **IMPORTANT!** The `Value` properties of [fields](/decision-automation/rule-editor-client-field) and [methods](/decision-automation/rule-editor-client-function), as well as the `Name` property of [enums](/decision-automation/rule-editor-client-enum) and [data sources](/decision-automation/rule-editor-client-datasource) supplied by an Adaptive Source menu provider use **combined** names. A combined name must be in dot notation and consist of the source object's class name (or its [alias name](/decision-automation/business-rule-type-handling-and-tyle-alias-names)) followed by the declared name of the member.
+> **IMPORTANT!** The `Value` properties of [fields](https://codeeffects.com/decision-automation/rule-editor-client-field) and [methods](https://codeeffects.com/decision-automation/rule-editor-client-function), as well as the `Name` property of [enums](https://codeeffects.com/decision-automation/rule-editor-client-enum) and [data sources](https://codeeffects.com/decision-automation/rule-editor-client-datasource) supplied by an Adaptive Source menu provider use **combined** names. A combined name must be in dot notation and consist of the source object's class name (or its [alias name](https://codeeffects.com/decision-automation/business-rule-type-handling-and-tyle-alias-names)) followed by the declared name of the member.
 
 The menu provider included in one of our [demo projects](https://github.com/orgs/codeeffects-software/repositories) automatically generates combined names. It provides a production-ready implementation of the `IMenuProvider` interface that you can use as a starting point or copy directly into your own projects.
 

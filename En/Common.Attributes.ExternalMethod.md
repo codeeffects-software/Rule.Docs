@@ -6,9 +6,9 @@
 
 ## Summary
 
-**IMPORTANT** Generic methods with generic params cannot be used in [Source XML](/decision-automation/business-rule-source-object-xml) source model as in-rule methods or rule actions. Use [Reflection](/decision-automation/business-rule-source-object-class) model if your [source object](/decision-automation/business-rule-source-object) declares generic methods.
+**IMPORTANT** Generic methods with generic params cannot be used in [Source XML](https://codeeffects.com/decision-automation/business-rule-source-object-xml) source model as in-rule methods or rule actions. Use [Reflection](https://codeeffects.com/decision-automation/business-rule-source-object-class) model if your [source object](https://codeeffects.com/decision-automation/business-rule-source-object) declares generic methods.
 
-When applied to a source object, this attribute references an external qualified public method to be used as an [in-rule method](/decision-automation). To qualify, the method must be `public`, static or instance, return a value type and must either be parameterless or declare only parameters of the source object type or of any [value type](/decision-automation/business-rules-data-types) supported by Code Effects.
+When applied to a source object, this attribute references an external qualified public method to be used as an [in-rule method](https://codeeffects.com/decision-automation). To qualify, the method must be `public`, static or instance, return a value type and must either be parameterless or declare only parameters of the source object type or of any [value type](https://codeeffects.com/decision-automation/business-rules-data-types) supported by Code Effects.
 
 ## Syntax
 
@@ -52,9 +52,9 @@ public class ExternalMethodAttribute : System.Attribute,
 
 ## Remarks
 
-This attribute is optional and is used to reference external methods that you want to use as in-rule methods. An exception is thrown if the attribute references a non-qualified method. If the external method defines multiple overloads, decorate each overload that you intend to use as an in-rule method with the [`MethodAttribute`](/decision-automation/rule-common-attributes-method), and assign a unique display name to each using its `DisplayName` property.
+This attribute is optional and is used to reference external methods that you want to use as in-rule methods. An exception is thrown if the attribute references a non-qualified method. If the external method defines multiple overloads, decorate each overload that you intend to use as an in-rule method with the [`MethodAttribute`](https://codeeffects.com/decision-automation/rule-common-attributes-method), and assign a unique display name to each using its `DisplayName` property.
 
-Remember that external static or instance in-rule methods can accept your source object as a parameter. When a rule author uses such a method in a rule, parameters of the source object type are not displayed — Rule Editor passes them automatically. In the [Rule XML](/decision-automation/business-rules-storage), the parameter of the source object type is represented as `this`.
+Remember that external static or instance in-rule methods can accept your source object as a parameter. When a rule author uses such a method in a rule, parameters of the source object type are not displayed — Rule Editor passes them automatically. In the [Rule XML](https://codeeffects.com/decision-automation/business-rules-storage), the parameter of the source object type is represented as `this`.
 
 ## Example
 

@@ -14,8 +14,8 @@ Evaluate conditions and perform side effects such as sending notifications, call
 	- In‑rule methods (public value‑returning methods) inside conditions.
 	- Rule actions (public void methods) declared on the source type or attached via external classes.
 	- Field value setters.
-- Supports Loop and Ruleset editor/evaluation [modes](/decision-automation/business-rule-editor-modes) where enabled by editor settings for iterative scenarios.
-- Not eligible for [Rule-Based Data Filtering](/decision-automation/business-rule-data-filtering).
+- Supports Loop and Ruleset editor/evaluation [modes](https://codeeffects.com/decision-automation/business-rule-editor-modes) where enabled by editor settings for iterative scenarios.
+- Not eligible for [Rule-Based Data Filtering](https://codeeffects.com/decision-automation/business-rule-data-filtering).
 
 ## C# - Execution
 
