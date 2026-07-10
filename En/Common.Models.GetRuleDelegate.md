@@ -6,7 +6,7 @@
 
 ## Summary
 
-Defines the signature of a public method that takes a rule ID as its single parameter and returns the corresponding [Rule XML](/decision-automation/business-rules-storage) as `System.Strng` value.
+Defines the signature of a public method that takes a rule ID as its single parameter and returns the corresponding [Rule XML](https://codeeffects.com/decision-automation/business-rules-storage) as `System.Strng` value.
 
 ## Syntax
 
@@ -25,13 +25,13 @@ public delegate string GetRuleDelegate(string ruleId);
 
 <small>Type: `System.String`</small>
 
-The string representaion of the [Rule XML](/decision-automation/business-rules-storage).
+The string representaion of the [Rule XML](https://codeeffects.com/decision-automation/business-rules-storage).
 
 ## Remarks
 
-During [rule evaluation](/decision-automation/business-rule-evaluation), the engine may encounter references to one or more rules within the [Rule XML](/decision-automation/business-rules-storage) being processed. For example, a rule may include [reusable rules](/decision-automation/business-rules-reusable) or use the **“If exists collection item where…”** logic expressed as a separate rule (see the code example below). In most cases, if a rule references other rules by their IDs, it includes the definitions of those rules in its own Rule XML. However, you may create Rule XML documents dynamically, split rule definitions across multiple files, or consume rules produced by other systems where rule definitions may reside in other files or data storage.
+During [rule evaluation](https://codeeffects.com/decision-automation/business-rule-evaluation), the engine may encounter references to one or more rules within the [Rule XML](https://codeeffects.com/decision-automation/business-rules-storage) being processed. For example, a rule may include [reusable rules](https://codeeffects.com/decision-automation/business-rules-reusable) or use the **“If exists collection item where…”** logic expressed as a separate rule (see the code example below). In most cases, if a rule references other rules by their IDs, it includes the definitions of those rules in its own Rule XML. However, you may create Rule XML documents dynamically, split rule definitions across multiple files, or consume rules produced by other systems where rule definitions may reside in other files or data storage.
 
-In such scenarios, a Rule XML document that references other rules may contain only their IDs, not their definitions. The `GetRuleDelegate` delegate enables the engine or [editor](/decision-automation/business-rule-editor) to locate and retrieve these referenced rules while reading the main rule. Several overloads of the [`Evaluator`](/decision-automation/rule-engine-evaluator) class accept this delegate, and it is also used by certain overloads of the [`Control.ToString()`](/decision-automation/rule-editor-control) method.
+In such scenarios, a Rule XML document that references other rules may contain only their IDs, not their definitions. The `GetRuleDelegate` delegate enables the engine or [editor](https://codeeffects.com/decision-automation/business-rule-editor) to locate and retrieve these referenced rules while reading the main rule. Several overloads of the [`Evaluator`](https://codeeffects.com/decision-automation/rule-engine-evaluator) class accept this delegate, and it is also used by certain overloads of the [`Control.ToString()`](https://codeeffects.com/decision-automation/rule-editor-control) method.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -78,4 +78,4 @@ In such scenarios, a Rule XML document that references other rules may contain o
 
 The following image shows the Rule XML from the example above loaded into the Rule Area:
 
-![Numeric Calculation](/resources/images/doc/delegate1.png)
+![Numeric Calculation](https://codeeffects.com/resources/images/doc/delegate1.png)

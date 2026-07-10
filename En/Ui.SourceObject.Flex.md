@@ -12,11 +12,11 @@ You can define and evaluate rules against data whose fields and methods are defi
 
 ## Why use FlexSource instead of Adaptive Source?
 
-The FlexSource option is ideal when you want to define the [Rule Editor](/decision-automation/business-rule-editor)'s [source object](/decision-automation/business-rule-source-object) entirely in code at runtime without introducing the additional infrastructure required by [Adaptive Source](/decision-automation/business-rule-adaptive-source). It allows your application to construct fields, methods, actions, and other source elements programmatically using familiar .NET patterns, making it a natural choice when the available rule elements depend on runtime conditions such as user roles, tenant configuration, feature flags, database settings, or other application-specific logic.
+The FlexSource option is ideal when you want to define the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor)'s [source object](https://codeeffects.com/decision-automation/business-rule-source-object) entirely in code at runtime without introducing the additional infrastructure required by [Adaptive Source](https://codeeffects.com/decision-automation/business-rule-adaptive-source). It allows your application to construct fields, methods, actions, and other source elements programmatically using familiar .NET patterns, making it a natural choice when the available rule elements depend on runtime conditions such as user roles, tenant configuration, feature flags, database settings, or other application-specific logic.
 
-Like [Source XML](/decision-automation/business-rule-source-object-xml), FlexSource determines the editor's available elements before rule authoring begins. Once the source has been built and the editor initialized, the entire generated source remains available throughout the authoring session. This provides a straightforward way to create dynamic editor experiences while retaining a relatively simple implementation model.
+Like [Source XML](https://codeeffects.com/decision-automation/business-rule-source-object-xml), FlexSource determines the editor's available elements before rule authoring begins. Once the source has been built and the editor initialized, the entire generated source remains available throughout the authoring session. This provides a straightforward way to create dynamic editor experiences while retaining a relatively simple implementation model.
 
-The trade-off is that FlexSource does not continuously adapt as the rule itself evolves. Unlike Adaptive Source, it cannot refine menus and available options based on the rule's current authoring context. Consequently, features that rely on real-time context awareness during rule construction, such as [Context Resetting](/decision-automation/business-rule-context-resetters), are not available when using the FlexSource option.
+The trade-off is that FlexSource does not continuously adapt as the rule itself evolves. Unlike Adaptive Source, it cannot refine menus and available options based on the rule's current authoring context. Consequently, features that rely on real-time context awareness during rule construction, such as [Context Resetting](https://codeeffects.com/decision-automation/business-rule-context-resetters), are not available when using the FlexSource option.
 
 ## What is FlexSource?
 
@@ -52,7 +52,7 @@ Meanwhile, the `IFlexDataProvider` tells the Rule Engine how to actually **get**
 
 ## What the Rule Editor and Engine Expect
 
-- <b>At design time (Rule Editor)</b> — You must declare a class (the FlexSource) that inherits from `System.Type` and overrides several of its members. The editor uses reflection to query your class for all public fields, properties, and methods not decorated with the [`ExcludeFromEvaluation`](/decision-automation/rule-common-attributes-excludefromevaluation) attribute.  
+- <b>At design time (Rule Editor)</b> — You must declare a class (the FlexSource) that inherits from `System.Type` and overrides several of its members. The editor uses reflection to query your class for all public fields, properties, and methods not decorated with the [`ExcludeFromEvaluation`](https://codeeffects.com/decision-automation/rule-common-attributes-excludefromevaluation) attribute.  
   The goal is to give the editor a `Type` that represents your dynamic structure.
 
 	Here are the required `System.Type` members to override:
@@ -76,7 +76,7 @@ Meanwhile, the `IFlexDataProvider` tells the Rule Engine how to actually **get**
 	TypeAttributes GetAttributeFlagsImpl();
 	```
 
-- <b>At evaluation time (Rule Engine)</b> — The evaluator only needs a small set of methods to get or set property values and invoke methods on your runtime data. Your data class must implement the [`IFlexDataProvider`](/decision-automation/rule-common-models-iflexdataprovider) interface:
+- <b>At evaluation time (Rule Engine)</b> — The evaluator only needs a small set of methods to get or set property values and invoke methods on your runtime data. Your data class must implement the [`IFlexDataProvider`](https://codeeffects.com/decision-automation/rule-common-models-iflexdataprovider) interface:
 
 	```csharp
 	using System;
@@ -98,14 +98,14 @@ Use FlexSource when:
 
 - Your data model is <b>defined at runtime</b> (for example, metadata tables or configurable schemas).
 - You need to author rules <b>before</b> the final data shape is known.
-- You want to [evaluate](/decision-automation/business-rule-evaluation-type) and optionally [execute](/decision-automation/business-rule-execution-type) rules without compiling classes.
+- You want to [evaluate](https://codeeffects.com/decision-automation/business-rule-evaluation-type) and optionally [execute](https://codeeffects.com/decision-automation/business-rule-execution-type) rules without compiling classes.
 
 Avoid FlexSource when:
 
 - You already have stable, strongly-typed POCOs.  
-  In that case, the regular [Source Object](/decision-automation/business-rule-source-object-class) flow is simpler and allows [Data Filtering](/decision-automation/business-rule-data-filtering) (LINQ translation) more directly.
+  In that case, the regular [Source Object](https://codeeffects.com/decision-automation/business-rule-source-object-class) flow is simpler and allows [Data Filtering](https://codeeffects.com/decision-automation/business-rule-data-filtering) (LINQ translation) more directly.
 
-> <b>Note:</b> [Data Filtering](/decision-automation/business-rule-data-filtering) with FlexSource may be limited depending on your LINQ provider. Use strongly-typed sources for LINQ translation scenarios.
+> <b>Note:</b> [Data Filtering](https://codeeffects.com/decision-automation/business-rule-data-filtering) with FlexSource may be limited depending on your LINQ provider. Use strongly-typed sources for LINQ translation scenarios.
 
 ## Mental Model
 

@@ -1,9 +1,9 @@
 ﻿
 # Using the Code Effects Rule Tracer
 
-The Code Effects rule [tracer](/decision-automation/rule-common-models-tracerdelegate) allows your application to inspect rule evaluation at runtime. It can be used as a native Visual Studio debugging aid, a custom logging mechanism, or both.
+The Code Effects rule [tracer](https://codeeffects.com/decision-automation/rule-common-models-tracerdelegate) allows your application to inspect rule evaluation at runtime. It can be used as a native Visual Studio debugging aid, a custom logging mechanism, or both.
 
-The tracer is assigned through [`EvaluationParameters`](/decision-automation/rule-common-models-evaluationparameters) before the rule is [evaluated](/decision-automation/business-rule-evaluation). During evaluation, the engine calls your tracer method every time it evaluates an expression in the rule, including equations, comparisons, conditions, setters, parameter values, and method invocations.
+The tracer is assigned through [`EvaluationParameters`](https://codeeffects.com/decision-automation/rule-common-models-evaluationparameters) before the rule is [evaluated](https://codeeffects.com/decision-automation/business-rule-evaluation). During evaluation, the engine calls your tracer method every time it evaluates an expression in the rule, including equations, comparisons, conditions, setters, parameter values, and method invocations.
 
 ## Basic Implementation
 
@@ -30,7 +30,7 @@ bool success = evaluator.Evaluate(instanceOfYourSourceType);
 
 ## How the Tracer Works
 
-The [tracer method](/decision-automation/rule-common-models-tracerdelegate) is called during rule evaluation each time the engine evaluates an expression. This includes evaluation of rule conditions, comparisons, calculations, setter values, method parameters, and method invocations.
+The [tracer method](https://codeeffects.com/decision-automation/rule-common-models-tracerdelegate) is called during rule evaluation each time the engine evaluates an expression. This includes evaluation of rule conditions, comparisons, calculations, setter values, method parameters, and method invocations.
 
 Your tracer method receives four values:
 
@@ -40,9 +40,9 @@ public void Tracer(object source, Expression expression, object result, XElement
 
 - ### source
 
-	The `source` parameter is the current reference to the original [source object](/decision-automation/business-rule-source-object) that was passed to the [`Evaluator`](/decision-automation/rule-engine-evaluator).
+	The `source` parameter is the current reference to the original [source object](https://codeeffects.com/decision-automation/business-rule-source-object) that was passed to the [`Evaluator`](https://codeeffects.com/decision-automation/rule-engine-evaluator).
 
-	This is the same object instance being evaluated by the [rule or ruleset](/decision-automation/business-rules-storage). If your rule contains [setters, in-rule methods, or actions](/decision-automation/business-rule-evaluation) that modify the source object, those changes can be inspected from this parameter as evaluation progresses.
+	This is the same object instance being evaluated by the [rule or ruleset](https://codeeffects.com/decision-automation/business-rules-storage). If your rule contains [setters, in-rule methods, or actions](https://codeeffects.com/decision-automation/business-rule-evaluation) that modify the source object, those changes can be inspected from this parameter as evaluation progresses.
 
 	For debugging, you can create a copy of the source object before evaluation begins and compare it to the current state of source at each breakpoint:
 
@@ -80,11 +80,11 @@ public void Tracer(object source, Expression expression, object result, XElement
 	- a setter value;
 	- another value produced during rule evaluation.
 
-	This parameter is useful both for debugging and for [logging](/content/business-rules-native-visual-studio-debugger-tracer-event-logger). It allows your application to record not only that a rule element was evaluated, but also what value it produced.
+	This parameter is useful both for debugging and for [logging](https://codeeffects.com/content/business-rules-native-visual-studio-debugger-tracer-event-logger). It allows your application to record not only that a rule element was evaluated, but also what value it produced.
 
 - ### element
 
-	The `element` parameter is the original [RuleXML](/decision-automation/business-rules-storage) node that represents the expression being evaluated. This is useful when you need to connect runtime evaluation back to the rule definition. You can inspect the XML node to see the original rule element, its attributes, values, and structure as they existed before evaluation.
+	The `element` parameter is the original [RuleXML](https://codeeffects.com/decision-automation/business-rules-storage) node that represents the expression being evaluated. This is useful when you need to connect runtime evaluation back to the rule definition. You can inspect the XML node to see the original rule element, its attributes, values, and structure as they existed before evaluation.
 
 	For example, while debugging, this parameter helps answer questions such as:
 
@@ -167,7 +167,7 @@ This approach allows your trace records to be connected to the business transact
 
 ## Capturing Source Object Changes
 
-[Execution type rules](/decision-automation/business-rule-execution-type) as well as [in-rule methods](/decision-automation/rule-common-attributes-method) referenced in any rule type may modify the [source object](/decision-automation/business-rule-source-object). If you need to know exactly when those changes happen, keep a copy of the source object before evaluation and compare it inside the tracer.
+[Execution type rules](https://codeeffects.com/decision-automation/business-rule-execution-type) as well as [in-rule methods](https://codeeffects.com/decision-automation/rule-common-attributes-method) referenced in any rule type may modify the [source object](https://codeeffects.com/decision-automation/business-rule-source-object). If you need to know exactly when those changes happen, keep a copy of the source object before evaluation and compare it inside the tracer.
 
 ```csharp
 var beforeEvaluation = Clone(instanceOfYourSourceType);
@@ -250,9 +250,9 @@ Use the tracer when you need runtime visibility into rule evaluation. Common use
 
 To use the Code Effects tracer:
 
-1. Create a method that matches the [`TracerDelegate`](/decision-automation/rule-common-models-tracerdelegate) signature.
-1. Assign that method to [`EvaluationParameters.Tracer`](/decision-automation/rule-common-models-evaluationparameters).
-1. Pass the `EvaluationParameters` instance to the [`Evaluator`](/decision-automation/rule-engine-evaluator).
+1. Create a method that matches the [`TracerDelegate`](https://codeeffects.com/decision-automation/rule-common-models-tracerdelegate) signature.
+1. Assign that method to [`EvaluationParameters.Tracer`](https://codeeffects.com/decision-automation/rule-common-models-evaluationparameters).
+1. Pass the `EvaluationParameters` instance to the [`Evaluator`](https://codeeffects.com/decision-automation/rule-engine-evaluator).
 1. Set a breakpoint inside the tracer method for debugging, or add logging code for runtime tracing.
 
 The tracer gives your .NET application direct access to the source object, evaluated expression, evaluation result, and original RuleXML element at each trace point in the rule evaluation process.

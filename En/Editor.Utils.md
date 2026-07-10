@@ -5,4 +5,4 @@
 
 Contains the following types:
 
-- [`Xml`](/decision-automation/rule-editor-utils-xml)
+- [`Xml`](https://codeeffects.com/decision-automation/rule-editor-utils-xml)

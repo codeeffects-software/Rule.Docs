@@ -32,7 +32,7 @@ or any other alias your organization defines.
 
 ## Creating a Type Resolver
 
-To enable Type Aliases, create a method that matches the [`GetTypeDelegate`](/decision-automation/rule-common-models-gettypedelegate) delegate. The method receives a type name or alias and returns the corresponding .NET `Type`. Here is an example of such method taken from one of our [demo projects](https://github.com/orgs/codeeffects-software/repositories):
+To enable Type Aliases, create a method that matches the [`GetTypeDelegate`](https://codeeffects.com/decision-automation/rule-common-models-gettypedelegate) delegate. The method receives a type name or alias and returns the corresponding .NET `Type`. Here is an example of such method taken from one of our [demo projects](https://github.com/orgs/codeeffects-software/repositories):
 
 ```csharp
 public class Utils

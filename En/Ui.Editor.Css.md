@@ -1,7 +1,7 @@
 ﻿
 # CSS Themes
 
-Code Effects [Rule Editor](/decision-automation/business-rule-editor) comes with built-in, customizable CSS themes. They are available through the Code Effects [npm package](https://www.npmjs.com/package/codeeffects), which includes several CSS files ready to be added to your web application:
+Code Effects [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) comes with built-in, customizable CSS themes. They are available through the Code Effects [npm package](https://www.npmjs.com/package/codeeffects), which includes several CSS files ready to be added to your web application:
 
 - `codeeffects.common.css` - Declares the core styles of the editor.
 - `codeeffects.light.css` - Declares the Light theme.

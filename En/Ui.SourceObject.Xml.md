@@ -3,7 +3,7 @@
 
 ## Introduction
 
-The [attribute-driven](/decision-automation/business-rule-source-object-class) customization of [source objects](/decision-automation/business-rule-source-object) in Code Effects is highly effective. However, there are scenarios where you may not have a concrete .NET class at design time, or you want full control over the authoring structure — for example, in [multilingual scenarios](/decision-automation/business-rule-multilingual-support) or when you prefer not to rely on class reflection. In such cases, a declarative XML representation of your source object - called Source XML - is a viable alternative.
+The [attribute-driven](https://codeeffects.com/decision-automation/business-rule-source-object-class) customization of [source objects](https://codeeffects.com/decision-automation/business-rule-source-object) in Code Effects is highly effective. However, there are scenarios where you may not have a concrete .NET class at design time, or you want full control over the authoring structure — for example, in [multilingual scenarios](https://codeeffects.com/decision-automation/business-rule-multilingual-support) or when you prefer not to rely on class reflection. In such cases, a declarative XML representation of your source object - called Source XML - is a viable alternative.
 
 ## Why Use Source XML?
 
@@ -11,13 +11,13 @@ You might choose Source XML for any of the following reasons:
 
 - You want to skip the reflection process and reuse the same source definition across multiple sessions or HTTP requests.
 - You need to present fields, in-rule methods, and actions in different languages and want to externalize display text.
-- You need precise control over the metadata that the [Rule Editor](/decision-automation/business-rule-editor) uses, beyond what reflection allows.
+- You need precise control over the metadata that the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) uses, beyond what reflection allows.
 
 ## Why use Source XML instead of Adaptive Source?
 
-The Source XML option is ideal when you need to dynamically shape the Rule Editor's available fields and methods before the editor is initialized, but do not require [Adaptive Source](/decision-automation/business-rule-adaptive-source)'s ability to build each rule interactively based on its current authoring context. For example, an application can generate Source XML on the fly - using [AI](/content/ai-powered-business-rules-engine), user roles, tenant settings, external configuration, or any other runtime criteria - to expose only the elements relevant to a particular user or scenario. This approach provides much of the flexibility of a dynamic source model while preserving the simplicity of the traditional editor initialization process.
+The Source XML option is ideal when you need to dynamically shape the Rule Editor's available fields and methods before the editor is initialized, but do not require [Adaptive Source](https://codeeffects.com/decision-automation/business-rule-adaptive-source)'s ability to build each rule interactively based on its current authoring context. For example, an application can generate Source XML on the fly - using [AI](https://codeeffects.com/content/ai-powered-business-rules-engine), user roles, tenant settings, external configuration, or any other runtime criteria - to expose only the elements relevant to a particular user or scenario. This approach provides much of the flexibility of a dynamic source model while preserving the simplicity of the traditional editor initialization process.
 
-The trade-off is that the entire generated source becomes available to the editor from the start of rule authoring, rather than evolving dynamically as the rule itself is being constructed. As a result, features that depend on continuous context awareness during authoring, such as [Context Resetting](/decision-automation/business-rule-context-resetters), are not available when using the Source XML option.
+The trade-off is that the entire generated source becomes available to the editor from the start of rule authoring, rather than evolving dynamically as the rule itself is being constructed. As a result, features that depend on continuous context awareness during authoring, such as [Context Resetting](https://codeeffects.com/decision-automation/business-rule-context-resetters), are not available when using the Source XML option.
 
 ## How to Create Source XML
 
@@ -32,7 +32,7 @@ You can create a Source XML document in one of two ways:
 	string sourceXml = editor.GetSourceXml();
 	```
 
-- <b>Create manually from scratch</b> — Author the XML document based on the published schema instead of generating it via reflection. This offers full control. The [`Xml`](/decision-automation/rule-editor-utils-xml) class can help you get an empty SourceXML document:
+- <b>Create manually from scratch</b> — Author the XML document based on the published schema instead of generating it via reflection. This offers full control. The [`Xml`](https://codeeffects.com/decision-automation/rule-editor-utils-xml) class can help you get an empty SourceXML document:
 
 	```csharp
 	using System.Xml;
@@ -64,12 +64,12 @@ Alternatively, you can use the `Control.SourceXmlFile` property to specify a fil
 
 ## Multilingual and Variant Use-Cases
 
-In applications supporting multiple languages/cultures, you may maintain separate Source XML documents per culture. Each document sets `DisplayName` and/or `Description` attributes for [fields](/decision-automation/rule-common-attributes-field), in-rule [methods](/decision-automation/rule-common-attributes-method), and [actions](/decision-automation/rule-common-attributes-action) in the target language. At runtime you load the appropriate version.
+In applications supporting multiple languages/cultures, you may maintain separate Source XML documents per culture. Each document sets `DisplayName` and/or `Description` attributes for [fields](https://codeeffects.com/decision-automation/rule-common-attributes-field), in-rule [methods](https://codeeffects.com/decision-automation/rule-common-attributes-method), and [actions](https://codeeffects.com/decision-automation/rule-common-attributes-action) in the target language. At runtime you load the appropriate version.
 
 ## Important Considerations
 
 - Source XML must adhere to the specified schema. Since version 3.0, the Rule Editor uses schema versioning namespaces.
-- Generic methods (methods with generic parameters) cannot be used in Source XML as in-rule methods or rule actions. Use a [.NET class](/decision-automation/business-rule-source-object-class) instead for those.
+- Generic methods (methods with generic parameters) cannot be used in Source XML as in-rule methods or rule actions. Use a [.NET class](https://codeeffects.com/decision-automation/business-rule-source-object-class) instead for those.
 - If you later switch from Source XML to a corresponding .NET class (or vice-versa), ensure consistency of field, method, and action names so that stored rules remain valid.
 - For multilingual scenarios, maintain consistent IDs or field names across culture variants to avoid authoring errors when switching.
 

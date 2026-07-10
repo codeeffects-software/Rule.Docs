@@ -5,7 +5,7 @@
 
 Contains the following types:
 
-- [`EvaluationException`](/decision-automation/rule-engine-evaluationexception)
-- [`Evaluator`](/decision-automation/rule-engine-evaluator)
-- [`Evaluator<TSource>`](/decision-automation/rule-engine-evaluator-generic)
-- [`RuleExtensions`](/decision-automation/rule-engine-ruleextensions)
+- [`EvaluationException`](https://codeeffects.com/decision-automation/rule-engine-evaluationexception)
+- [`Evaluator`](https://codeeffects.com/decision-automation/rule-engine-evaluator)
+- [`Evaluator<TSource>`](https://codeeffects.com/decision-automation/rule-engine-evaluator-generic)
+- [`RuleExtensions`](https://codeeffects.com/decision-automation/rule-engine-ruleextensions)

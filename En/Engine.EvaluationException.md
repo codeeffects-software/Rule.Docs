@@ -6,7 +6,7 @@
 
 ## Summary
 
-This exception is thrown when the [Rule Engine](/decision-automation/business-rule-evaluation) encounters an error during the [evaluation](/decision-automation/business-rule-evaluation) of a rule.
+This exception is thrown when the [Rule Engine](https://codeeffects.com/decision-automation/business-rule-evaluation) encounters an error during the [evaluation](https://codeeffects.com/decision-automation/business-rule-evaluation) of a rule.
 
 ## Syntax
 
@@ -18,5 +18,5 @@ public class EvaluationException : CodeEffects.Rule.Common.RuleException
 
 - `System.Object`
 	- `System.Exception`
-		- [`CodeEffects.Rule.Common.RuleException`](/decision-automation/rule-common-ruleexception)
+		- [`CodeEffects.Rule.Common.RuleException`](https://codeeffects.com/decision-automation/rule-common-ruleexception)
 			- **CodeEffects.Rule.Engine.EvaluationException**

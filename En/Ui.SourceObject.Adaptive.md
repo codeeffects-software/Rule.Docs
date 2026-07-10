@@ -1,13 +1,13 @@
 ﻿
 # Adaptive Source in Code Effects
 
-Adaptive Source is an advanced [source object model](/decision-automation/business-rule-source-object) in Code Effects that enables fully dynamic, context-aware rule authoring. Unlike other source models that require the entire source object to be declared and loaded before the [editor initializes](/decision-automation/business-rule-editor-client-initialization), Adaptive Source allows your application to supply rule menus on demand, as the rule author creates or updates the rule.
+Adaptive Source is an advanced [source object model](https://codeeffects.com/decision-automation/business-rule-source-object) in Code Effects that enables fully dynamic, context-aware rule authoring. Unlike other source models that require the entire source object to be declared and loaded before the [editor initializes](https://codeeffects.com/decision-automation/business-rule-editor-client-initialization), Adaptive Source allows your application to supply rule menus on demand, as the rule author creates or updates the rule.
 
-Instead of forcing the [Rule Editor](/decision-automation/business-rule-editor) to operate on a static schema, Adaptive Source lets your application decide which [fields](/decision-automation/rule-editor-client-field), [methods](/decision-automation/rule-editor-client-function), setters, actions, [reusable rules](/decision-automation/business-rules-reusable), [enumerations](/decision-automation/rule-editor-client-enum), and [dynamic menu data sources](/decision-automation/business-rules-dynamic-menu-data-sources) should be available at each point in the rule.
+Instead of forcing the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) to operate on a static schema, Adaptive Source lets your application decide which [fields](https://codeeffects.com/decision-automation/rule-editor-client-field), [methods](https://codeeffects.com/decision-automation/rule-editor-client-function), setters, actions, [reusable rules](https://codeeffects.com/decision-automation/business-rules-reusable), [enumerations](https://codeeffects.com/decision-automation/rule-editor-client-enum), and [dynamic menu data sources](https://codeeffects.com/decision-automation/business-rules-dynamic-menu-data-sources) should be available at each point in the rule.
 
 This makes the editor behave more like an intelligent decision interface than a static form designer.
 
-Adaptive Source was introduced in [version 6](/decision-automation/new-features-version-6-business-rules-engine) of the Code Effects platform and represents an industry-first approach to dynamic menu generation in natural-language [rule interfaces](/content/business-rules-ai-driven-user-interface). You can read more about the general concept behind Adaptive Source [here](/content/ai-powered-business-rules-engine). This article explains its basic implementation. Fork any of our [demo projects](https://github.com/orgs/codeeffects-software/repositories) for a complete implementation of [rule authoring](/decision-automation/business-rule-management) and [evaluation](/decision-automation/business-rule-evaluation) using Adaptive Source.
+Adaptive Source was introduced in [version 6](https://codeeffects.com/decision-automation/new-features-version-6-business-rules-engine) of the Code Effects platform and represents an industry-first approach to dynamic menu generation in natural-language [rule interfaces](https://codeeffects.com/content/business-rules-ai-driven-user-interface). You can read more about the general concept behind Adaptive Source [here](https://codeeffects.com/content/ai-powered-business-rules-engine). This article explains its basic implementation. Fork any of our [demo projects](https://github.com/orgs/codeeffects-software/repositories) for a complete implementation of [rule authoring](https://codeeffects.com/decision-automation/business-rule-management) and [evaluation](https://codeeffects.com/decision-automation/business-rule-evaluation) using Adaptive Source.
 
 ## Why Adaptive Source Matters
 
@@ -28,17 +28,17 @@ Adaptive Source removes those limitations. The editor no longer has to depend on
 
 ## How Adaptive Source Works
 
-Adaptive Source is based on a menu provider class that implements the [`CodeEffects.Rule.Editor.Models.IMenuProvider`](/decision-automation/rule-editor-models-imenuprovider) interface.
+Adaptive Source is based on a menu provider class that implements the [`CodeEffects.Rule.Editor.Models.IMenuProvider`](https://codeeffects.com/decision-automation/rule-editor-models-imenuprovider) interface.
 
-The provider becomes the editor’s source of rule metadata. It supplies [fields](/decision-automation/rule-editor-client-field), [methods](/decision-automation/rule-editor-client-function), [setters](/decision-automation/rule-editor-client-field), [actions](/decision-automation/rule-editor-client-function), [reusable rules](/decision-automation/business-rules-reusable), [enums](/decision-automation/rule-editor-client-enum), [data sources](/decision-automation/rule-editor-client-datasource) as dynamic UI menus whenever the editor needs them.
+The provider becomes the editor’s source of rule metadata. It supplies [fields](https://codeeffects.com/decision-automation/rule-editor-client-field), [methods](https://codeeffects.com/decision-automation/rule-editor-client-function), [setters](https://codeeffects.com/decision-automation/rule-editor-client-field), [actions](https://codeeffects.com/decision-automation/rule-editor-client-function), [reusable rules](https://codeeffects.com/decision-automation/business-rules-reusable), [enums](https://codeeffects.com/decision-automation/rule-editor-client-enum), [data sources](https://codeeffects.com/decision-automation/rule-editor-client-datasource) as dynamic UI menus whenever the editor needs them.
 
 At a high level, the workflow looks like this:
 
-1. The server initializes the [`Control`](/decision-automation/rule-editor-control) and assigns its `MenuProvider` property to implementation of [`IMenuProvider`](/decision-automation/rule-editor-models-imenuprovider).
+1. The server initializes the [`Control`](https://codeeffects.com/decision-automation/rule-editor-control) and assigns its `MenuProvider` property to implementation of [`IMenuProvider`](https://codeeffects.com/decision-automation/rule-editor-models-imenuprovider).
 1. The server returns editor settings and source-related initialization data to the client.
-1. The client initializes the editor and passes the `adaptiveSource` object to [`$rule.init()`](/decision-automation/business-rule-editor-client-initialization) that includes `menuCallback`.
+1. The client initializes the editor and passes the `adaptiveSource` object to [`$rule.init()`](https://codeeffects.com/decision-automation/business-rule-editor-client-initialization) that includes `menuCallback`.
 1. When the editor needs the next menu, it calls the configured `menuCallback`.
-1. The callback sends the current rule's [`Context`](/decision-automation/rule-editor-client-context) object received from the editor to the server.
+1. The callback sends the current rule's [`Context`](https://codeeffects.com/decision-automation/rule-editor-client-context) object received from the editor to the server.
 1. The server calls `Control.GetAdaptiveData()` and asks the supplied menu provider to generate the next menu using the rule context.
 1. Server returns the generated data of the next menu to the callback on the client.
 1. The callback passes it to the editor.
@@ -47,7 +47,7 @@ This keeps the editor lightweight while giving your application complete control
 
 ## The IMenuProvider Interface
 
-Adaptive Source revolves around the [`IMenuProvider`](/decision-automation/rule-editor-models-imenuprovider) interface:
+Adaptive Source revolves around the [`IMenuProvider`](https://codeeffects.com/decision-automation/rule-editor-models-imenuprovider) interface:
 
 ```csharp
 using System.Collections.Generic

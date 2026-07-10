@@ -1,12 +1,12 @@
 
 # Initialization of the Rule Editor.
 
-The [Rule Editor](/decision-automation/business-rule-editor) can be initialized on a web page in one of two ways:
+The [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) can be initialized on a web page in one of two ways:
 
 - Server-centric initialization
 - Client-centric initialization
 
-The first approach is intended for applications that frequently change editor settings, such as [source objects](/decision-automation/business-rule-source-object), [UI options](/decision-automation/business-rule-editor-settings), [CSS](/decision-automation/business-rule-settings-and-appearance), [current UI culture](/decision-automation/business-rule-multilingual-support), or other server-generated configuration. Since those settings are already produced on the server, it often makes sense to perform the entire editor initialization there. This initialization method has been available since the first release of the Code Effects platform in 2009 and remains supported for backward compatibility.
+The first approach is intended for applications that frequently change editor settings, such as [source objects](https://codeeffects.com/decision-automation/business-rule-source-object), [UI options](https://codeeffects.com/decision-automation/business-rule-editor-settings), [CSS](https://codeeffects.com/decision-automation/business-rule-settings-and-appearance), [current UI culture](https://codeeffects.com/decision-automation/business-rule-multilingual-support), or other server-generated configuration. Since those settings are already produced on the server, it often makes sense to perform the entire editor initialization there. This initialization method has been available since the first release of the Code Effects platform in 2009 and remains supported for backward compatibility.
 
 The second approach is handled primarily by the client-side editor script. It requires only two pieces of data from the server, while all remaining settings can be configured directly by your client-side code.
 
@@ -14,7 +14,7 @@ Both approaches provide identical functionality. Ultimately, they both initializ
 
 ## Server-Centric Initialization
 
-First, initialize the server-side [`Control`](/decision-automation/rule-editor-control) instance and obtain the two pieces of data required by the client. The following example comes from one of our [demo projects](https://github.com/orgs/codeeffects-software/repositories) and uses the [Reflection source model](/decision-automation/business-rule-source-object-class):
+First, initialize the server-side [`Control`](https://codeeffects.com/decision-automation/rule-editor-control) instance and obtain the two pieces of data required by the client. The following example comes from one of our [demo projects](https://github.com/orgs/codeeffects-software/repositories) and uses the [Reflection source model](https://codeeffects.com/decision-automation/business-rule-source-object-class):
 
 ```csharp
 using CodeEffects.Rule.Common.Models;
@@ -99,9 +99,9 @@ editor.loadSettings(settings.editorData);
 
 ## Client-Centric Initialization
 
-The client-centric approach gives your client-side code complete control over editor initialization. The following example uses the [Adaptive Source](/decision-automation/business-rule-adaptive-source) model from one of our [demo project repos](https://github.com/orgs/codeeffects-software/repositories).
+The client-centric approach gives your client-side code complete control over editor initialization. The following example uses the [Adaptive Source](https://codeeffects.com/decision-automation/business-rule-adaptive-source) model from one of our [demo project repos](https://github.com/orgs/codeeffects-software/repositories).
 
-In this case, the `Settings` class is smaller because UI settings are configured on the client instead of the server. Likewise, the `GetControl()` method only needs to assign the menu provider that implements [`IMenuProvider`](/decision-automation/rule-editor-models-imenuprovider) interface and supplies dynamic menus while the user creates or updates rules.
+In this case, the `Settings` class is smaller because UI settings are configured on the client instead of the server. Likewise, the `GetControl()` method only needs to assign the menu provider that implements [`IMenuProvider`](https://codeeffects.com/decision-automation/rule-editor-models-imenuprovider) interface and supplies dynamic menus while the user creates or updates rules.
 
 The endpoint itself remains unchanged:
 
@@ -175,7 +175,7 @@ In this example, the `$rule.init()` method receives a single settings object tha
 - ### refData<br/>
 	<small>Type: `String`</small>
 
-	Any custom data that you want to pass between the client and server whenever the editor requests a new menu. This can be useful for passing user-specific or source-specific information. Optional. See the [`Context`](/decision-automation/rule-editor-client-context) class documentation for more information.
+	Any custom data that you want to pass between the client and server whenever the editor requests a new menu. This can be useful for passing user-specific or source-specific information. Optional. See the [`Context`](https://codeeffects.com/decision-automation/rule-editor-client-context) class documentation for more information.
 
 - ### globalData<br/>
 	<small>Type: `String`</small>
@@ -185,7 +185,7 @@ In this example, the `$rule.init()` method receives a single settings object tha
 - ### editorData<br/>
 	<small>Type: `String`</small>
 
-	A proprietary JSON string containing source-related data required by the editor. When using [Adaptive Source](/decision-automation/business-rule-adaptive-source), this value is still required because it contains UI-related information even though the source metadata is loaded dynamically. Required.
+	A proprietary JSON string containing source-related data required by the editor. When using [Adaptive Source](https://codeeffects.com/decision-automation/business-rule-adaptive-source), this value is still required because it contains UI-related information even though the source metadata is loaded dynamically. Required.
 
 - ### saveRuleCallback<br/>
 	<small>Type: `Function`</small>
@@ -258,7 +258,7 @@ In this example, the `$rule.init()` method receives a single settings object tha
 - ### adaptiveSource<br/>
 	<small>Type: `Object`</small>
 
-	Passing this object to `$rule.init()` instructs the editor to use the [Adaptive Source](/decision-automation/business-rule-adaptive-source) model. If omitted, the editor automatically selects one of the remaining source models based on the supplied `globalData`.
+	Passing this object to `$rule.init()` instructs the editor to use the [Adaptive Source](https://codeeffects.com/decision-automation/business-rule-adaptive-source) model. If omitted, the editor automatically selects one of the remaining source models based on the supplied `globalData`.
 
 	<div class="params">
 
@@ -286,14 +286,14 @@ In this example, the `$rule.init()` method receives a single settings object tha
 	
 		- *args* (`Object`) - Contains the current rule context and the type of menu requested by the editor.
 		 
-			- The `context` object mirrors the server-side [`CodeEffects.Rule.Editor.Client.Context`](/decision-automation/rule-editor-client-context) class:
+			- The `context` object mirrors the server-side [`CodeEffects.Rule.Editor.Client.Context`](https://codeeffects.com/decision-automation/rule-editor-client-context) class:
 
 			```javascript
 			// The editor sets the value of the refData property to the value
 			//	the value supplied to $rule.init()
 			var context = { refData: null, conditions: [], executions: [] };
 			```
-			- The `type` property contains one of the members of the following public object, which mirrors the server-side [`RuleSectionType`](/decision-automation/rule-editor-models-rulesectiontype) enum:
+			- The `type` property contains one of the members of the following public object, which mirrors the server-side [`RuleSectionType`](https://codeeffects.com/decision-automation/rule-editor-models-rulesectiontype) enum:
 
 			```javascript
 			$rule.Common.RuleSectionType = Object.freeze({ Conditions: 0, Executions: 1 });
@@ -310,15 +310,15 @@ In this example, the `$rule.init()` method receives a single settings object tha
 
 		#### Remarks
 
-		The editor includes a built-in mechanism that automatically waits for slow menu responses and displays the *Loading...* menu when appropriate. The text of this menu can be customized using the [HelpXML](/decision-automation/business-rule-multilingual-support) feature.
+		The editor includes a built-in mechanism that automatically waits for slow menu responses and displays the *Loading...* menu when appropriate. The text of this menu can be customized using the [HelpXML](https://codeeffects.com/decision-automation/business-rule-multilingual-support) feature.
 
-		The `$rule` interface exposes default [Adaptive Source](/decision-automation/business-rule-adaptive-source) settings:
+		The `$rule` interface exposes default [Adaptive Source](https://codeeffects.com/decision-automation/business-rule-adaptive-source) settings:
 
 		```javascript
 		$rule.defaults = { min: 400, max: 800, behavior: $rule.behavior.replace };
 		```
 
-		This object is mutable. You can modify these defaults globally or override them for individual editor instances by passing custom values to `$rule.init()`. This is particularly useful when different source objects or [menu providers](/decision-automation/rule-editor-models-imenuprovider) have different response characteristics.
+		This object is mutable. You can modify these defaults globally or override them for individual editor instances by passing custom values to `$rule.init()`. This is particularly useful when different source objects or [menu providers](https://codeeffects.com/decision-automation/rule-editor-models-imenuprovider) have different response characteristics.
 
 	</div>
 </div>

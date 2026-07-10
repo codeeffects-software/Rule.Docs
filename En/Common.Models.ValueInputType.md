@@ -6,7 +6,7 @@
 
 ## Summary
 
-Defines the type of input that the user can use to set the value of a particular field in the [Rule Area](/decision-automation/business-rule-editor).
+Defines the type of input that the user can use to set the value of a particular field in the [Rule Area](https://codeeffects.com/decision-automation/business-rule-editor).
 
 ## Syntax
 
@@ -26,4 +26,4 @@ public enum ValueInputType
 
 ## Remarks
 
-This enumeration is used by the [`FieldAttribute`](/decision-automation/rule-common-attributes-fieldattribute), [`ReturnAttribute`](/decision-automation/rule-common-attributes-returnattribute), and [`ParameterAttribute`](/decision-automation/rule-common-attributes-parameterattribute) to specify how rule authors are permitted to input values for fields, method return values, and method parameters of the [source object](/decision-automation/business-rule-source-object). See the corresponding topics for details.
+This enumeration is used by the [`FieldAttribute`](https://codeeffects.com/decision-automation/rule-common-attributes-fieldattribute), [`ReturnAttribute`](https://codeeffects.com/decision-automation/rule-common-attributes-returnattribute), and [`ParameterAttribute`](https://codeeffects.com/decision-automation/rule-common-attributes-parameterattribute) to specify how rule authors are permitted to input values for fields, method return values, and method parameters of the [source object](https://codeeffects.com/decision-automation/business-rule-source-object). See the corresponding topics for details.

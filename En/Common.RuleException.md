@@ -6,7 +6,7 @@
 
 ## Summary
 
-Provides the base class for all rule-related exception types used by both the [Rules Engine](/decision-automation/business-rule-evaluation) and the [Rule Editor](/decision-automation/business-rule-editor).
+Provides the base class for all rule-related exception types used by both the [Rules Engine](https://codeeffects.com/decision-automation/business-rule-evaluation) and the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor).
 
 ## Syntax
 
@@ -19,7 +19,7 @@ public class RuleException : System.Exception
 - `System.Object`
 	- `System.Exception`
 		- **CodeEffects.Rule.Common.RuleException**
-			- [`CodeEffects.Rule.Editor.InvalidRuleException`](/decision-automation/rule-editor-invalidruleexception)
-			- [`CodeEffects.Rule.Editor.MalformedXmlException`](/decision-automation/rule-editor-malformedxmlexception)
-			- [`CodeEffects.Rule.Editor.SourceException`](/decision-automation/rule-editor-sourceexception)
-			- [`CodeEffects.Rule.Engine.EvaluationException`](/decision-automation/rule-engine-evaluationexception)
+			- [`CodeEffects.Rule.Editor.InvalidRuleException`](https://codeeffects.com/decision-automation/rule-editor-invalidruleexception)
+			- [`CodeEffects.Rule.Editor.MalformedXmlException`](https://codeeffects.com/decision-automation/rule-editor-malformedxmlexception)
+			- [`CodeEffects.Rule.Editor.SourceException`](https://codeeffects.com/decision-automation/rule-editor-sourceexception)
+			- [`CodeEffects.Rule.Engine.EvaluationException`](https://codeeffects.com/decision-automation/rule-engine-evaluationexception)

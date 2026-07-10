@@ -28,4 +28,4 @@ namespace CodeEffects.Rule.Common.Models
 
 ## Remarks
 
-This interface is used by the [FlexSource](/decision-automation/business-rule-flex-source) technology. Refer to the corresponding topic for more details.
+This interface is used by the [FlexSource](https://codeeffects.com/decision-automation/business-rule-flex-source) technology. Refer to the corresponding topic for more details.

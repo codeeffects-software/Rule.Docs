@@ -12,13 +12,13 @@ This release focuses on:
 - enhanced UI consistency
 - operational scalability
 
-while preserving the [embeddable](/content/data-security-business-rules-engine), [high-performance architecture](/content/high-performance-business-rules-engine) that defines the Code Effects platform.
+while preserving the [embeddable](https://codeeffects.com/content/data-security-business-rules-engine), [high-performance architecture](https://codeeffects.com/content/high-performance-business-rules-engine) that defines the Code Effects platform.
 
 ## First True BYOAI Architecture in Business Rules
 
 Version 6 introduces the industry’s first true Bring Your Own AI (BYOAI) architecture for deterministic business rules and decision automation.
 
-Unlike AI-enabled platforms that force customers into vendor-controlled AI infrastructure, Code Effects allows organizations to [integrate any AI model](/content/ai-powered-business-rules-engine), inference platform, or orchestration strategy directly into [rule authoring](/decision-automation/business-rule-management) and [evaluation](/decision-automation/business-rule-evaluation).
+Unlike AI-enabled platforms that force customers into vendor-controlled AI infrastructure, Code Effects allows organizations to [integrate any AI model](https://codeeffects.com/content/ai-powered-business-rules-engine), inference platform, or orchestration strategy directly into [rule authoring](https://codeeffects.com/decision-automation/business-rule-management) and [evaluation](https://codeeffects.com/decision-automation/business-rule-evaluation).
 
 Organizations retain full control over:
 
@@ -34,7 +34,7 @@ The platform acts as AI-capable decision infrastructure rather than a hosted AI 
 
 - ### Adaptive Source
 
-	[Adaptive Source](/decision-automation/business-rule-adaptive-source) introduces a completely new approach to rule authoring. Instead of exposing a fixed static data surface, the editor can dynamically generate fields, methods, operators, actions, and menu structures contextually as the user builds or updates a rule.
+	[Adaptive Source](https://codeeffects.com/decision-automation/business-rule-adaptive-source) introduces a completely new approach to rule authoring. Instead of exposing a fixed static data surface, the editor can dynamically generate fields, methods, operators, actions, and menu structures contextually as the user builds or updates a rule.
 
 	The editor passes the complete current rule context to the application, allowing menu generation to be driven by:
 
@@ -49,7 +49,7 @@ The platform acts as AI-capable decision infrastructure rather than a hosted AI 
 
 - ### Prompt Flags
 
-	[Prompt-enabled rule elements](/decision-automation/business-rules-using-ai-prompts) allow organizations to integrate AI inference directly into [deterministic rule evaluation](/decision-automation/business-rule-evaluation). Any string field, method parameter, or method return value can be marked as a Prompt-enabled element:
+	[Prompt-enabled rule elements](https://codeeffects.com/decision-automation/business-rules-using-ai-prompts) allow organizations to integrate AI inference directly into [deterministic rule evaluation](https://codeeffects.com/decision-automation/business-rule-evaluation). Any string field, method parameter, or method return value can be marked as a Prompt-enabled element:
 
 	```csharp
 	[Method(DisplayName = "Get AI Score")]
@@ -62,9 +62,9 @@ The platform acts as AI-capable decision infrastructure rather than a hosted AI 
 	public string Notes { get; set; }
 	```
 
-	When enabled, the [rule editor](/decision-automation/business-rule-editor) displays a dedicated Prompt dialog for long-form structured input whenever the prompted field, parameter, or return value is selected from the related menu.
+	When enabled, the [rule editor](https://codeeffects.com/decision-automation/business-rule-editor) displays a dedicated Prompt dialog for long-form structured input whenever the prompted field, parameter, or return value is selected from the related menu.
 
-	![Prompt](/resources/images/doc/promptscreen.jpg)
+	![Prompt](https://codeeffects.com/resources/images/doc/promptscreen.jpg)
 
 	This allows organizations to integrate:
 
@@ -77,9 +77,9 @@ The platform acts as AI-capable decision infrastructure rather than a hosted AI 
 
 ## First Native Visual Studio Rule Debugger and Evaluation Tracer
 
-Version 6 introduces the first native rule evaluation Visual Studio [debugger](/decision-automation/business-rules-debugger-tracer-event-logger-in-visual-studio) in the decision automation industry.
+Version 6 introduces the first native rule evaluation Visual Studio [debugger](https://codeeffects.com/decision-automation/business-rules-debugger-tracer-event-logger-in-visual-studio) in the decision automation industry.
 	
-The new debugging architecture is implemented through a [tracing delegate](/decision-automation/rule-common-models-tracerdelegate) passed directly into the [`Evaluate()`](/decision-automation/rule-engine-evaluator-generic) method, allowing organizations to integrate rule evaluation debugging, tracing, logging, and runtime inspection directly into their own application logic and development workflows.
+The new debugging architecture is implemented through a [tracing delegate](https://codeeffects.com/decision-automation/rule-common-models-tracerdelegate) passed directly into the [`Evaluate()`](https://codeeffects.com/decision-automation/rule-engine-evaluator-generic) method, allowing organizations to integrate rule evaluation debugging, tracing, logging, and runtime inspection directly into their own application logic and development workflows.
 
 Because the debugger operates through standard .NET execution flow rather than an external inspection layer, developers can use familiar Visual Studio capabilities including:
 
@@ -120,7 +120,7 @@ The result is a unified debugging, tracing, and observability architecture for e
 
 ## Assembly Whitelisting for Enhanced Evaluation Security
 
-Version 6 introduces [Assembly Whitelisting](/decision-automation/business-rules-assembly-whitelisting) as a new optional runtime security feature.
+Version 6 introduces [Assembly Whitelisting](https://codeeffects.com/decision-automation/business-rules-assembly-whitelisting) as a new optional runtime security feature.
 
 Organizations can now explicitly restrict rule execution to approved namespaces and assemblies during evaluation. If a rule attempts to invoke a method or access a field declared outside the approved whitelist, the engine immediately throws an exception and terminates evaluation.
 
@@ -182,7 +182,7 @@ Improvements include refinements to:
 - layout alignment
 - operational usability
 
-These updates collectively improve the [overall authoring experience](/content/business-rules-ai-driven-user-interface) while preserving the flexibility and power of the underlying decision infrastructure.
+These updates collectively improve the [overall authoring experience](https://codeeffects.com/content/business-rules-ai-driven-user-interface) while preserving the flexibility and power of the underlying decision infrastructure.
 
 ## Built for the Next Generation of Decision Automation
 
@@ -195,4 +195,4 @@ Version 6 represents a major evolution of the Code Effects platform. The release
 - high-performance compiled execution
 - modern frontend architecture
 
-inside a fully embeddable business rules platform designed for long-term [enterprise decision automation](/content/business-rules-engine-in-details).
+inside a fully embeddable business rules platform designed for long-term [enterprise decision automation](https://codeeffects.com/content/business-rules-engine-in-details).

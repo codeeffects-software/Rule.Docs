@@ -6,7 +6,7 @@
 
 ## Summary
 
-This enumeration defines operators that should be excluded from use in rule conditions within the editor. See the description of the [`Control.ExcludedOperators`](/decision-automation/rule-editor-control) property for details.
+This enumeration defines operators that should be excluded from use in rule conditions within the editor. See the description of the [`Control.ExcludedOperators`](https://codeeffects.com/decision-automation/rule-editor-control) property for details.
 
 ## Syntax
 

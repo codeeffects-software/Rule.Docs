@@ -6,7 +6,7 @@
 
 ## Summary
 
-Declares the signature of a parameterless method that returns a list of `CodeEffects.Rule.Editor.Models.DataSourceItem` instances used by the [Dynamic Menu Data Source](/decision-automation/business-rules-dynamic-menu-data-sources) feature.
+Declares the signature of a parameterless method that returns a list of `CodeEffects.Rule.Editor.Models.DataSourceItem` instances used by the [Dynamic Menu Data Source](https://codeeffects.com/decision-automation/business-rules-dynamic-menu-data-sources) feature.
 
 ## Syntax
 

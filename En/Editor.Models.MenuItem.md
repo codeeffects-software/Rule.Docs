@@ -6,7 +6,7 @@
 
 ## Summary
 
-This class is used to hold rule items in the `ContextMenuRules` and `ToolBarRules` collections of the [`Control`](/decision-automation/rule-editor-control) class.
+This class is used to hold rule items in the `ContextMenuRules` and `ToolBarRules` collections of the [`Control`](https://codeeffects.com/decision-automation/rule-editor-control) class.
 
 ## Syntax
 
@@ -21,7 +21,7 @@ public class  MenuItem
 - ### Description<br/>
 	<small>Type: `System.String`</small>
 
-	Gets or sets the description of the menu item. If set, the [Help String](/decision-automation/business-rule-editor) displays this description when the menu item is selected. This property is optional.
+	Gets or sets the description of the menu item. If set, the [Help String](https://codeeffects.com/decision-automation/business-rule-editor) displays this description when the menu item is selected. This property is optional.
 
 - ### DisplayName<br/>
 	<small>Type: `System.String`</small>

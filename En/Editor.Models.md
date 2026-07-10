@@ -5,11 +5,11 @@
 
 Contains the following types:
 
-- [`DataSourceHolder`](/decision-automation/rule-editor-models-datasourceholder)
-- [`GetDataSourceDelegate`](/decision-automation/rule-editor-models-getdatasourcedelegate)
-- [`GetSourceElementDelegate`](/decision-automation/rule-editor-models-getsourceelementdelegate)
-- [`MenuItem`](/decision-automation/rule-editor-models-menuitem)
-- [`RuleModel`](/decision-automation/rule-editor-models-rulemodel)
-- [`RuleSectionType`](/decision-automation/rule-editor-models-rulesectiontype)
-- [`Source`](/decision-automation/rule-editor-models-source)
-- [`SourceElementType`](/decision-automation/rule-editor-models-sourceelementtype)
+- [`DataSourceHolder`](https://codeeffects.com/decision-automation/rule-editor-models-datasourceholder)
+- [`GetDataSourceDelegate`](https://codeeffects.com/decision-automation/rule-editor-models-getdatasourcedelegate)
+- [`GetSourceElementDelegate`](https://codeeffects.com/decision-automation/rule-editor-models-getsourceelementdelegate)
+- [`MenuItem`](https://codeeffects.com/decision-automation/rule-editor-models-menuitem)
+- [`RuleModel`](https://codeeffects.com/decision-automation/rule-editor-models-rulemodel)
+- [`RuleSectionType`](https://codeeffects.com/decision-automation/rule-editor-models-rulesectiontype)
+- [`Source`](https://codeeffects.com/decision-automation/rule-editor-models-source)
+- [`SourceElementType`](https://codeeffects.com/decision-automation/rule-editor-models-sourceelementtype)

@@ -2,7 +2,7 @@
 
 ## Rule Elements and Definitions
 
-Code Effects decision automation platform supports two types of business rules: [evaluation type](/decision-automation/business-rule-evaluation-type) and [execution type](/decision-automation/business-rule-execution-type). The evaluation type only answers one question — *True* or *False*. The execution type answers the same question and also can invoke public [methods](/decision-automation/rule-common-attributes-action) and/or set/update [field](/decision-automation/rule-common-attributes-field) values. Here are examples of both rule types:
+Code Effects decision automation platform supports two types of business rules: [evaluation type](https://codeeffects.com/decision-automation/business-rule-evaluation-type) and [execution type](https://codeeffects.com/decision-automation/business-rule-execution-type). The evaluation type only answers one question — *True* or *False*. The execution type answers the same question and also can invoke public [methods](https://codeeffects.com/decision-automation/rule-common-attributes-action) and/or set/update [field](https://codeeffects.com/decision-automation/rule-common-attributes-field) values. Here are examples of both rule types:
 
 > Check if First Name is equal to "John" and Age is greater than or equal to 18
 
@@ -10,7 +10,7 @@ Code Effects decision automation platform supports two types of business rules: 
 
 Notice how you were able to read both Code Effects rules and immediately understand the business logic each rule defines without the necessity of deciphering or decoding any cryptic format or <a href="/resources/images/doc/decisiontable.gif" target="_blank_">decision table</a>.
 
-In both rules the `First Name is equal to "John"` and the `Age is greater than or equal to 18` are called *conditions*. Each condition consists of a *field*, an *operator*, and a *value*. Both the field and the value can be either a property of your [source object](/decision-automation/business-rule-source-object) or a qualified in-rule [method](/decision-automation/rule-common-attributes-method) declared [anywhere](/decision-automation/rule-common-attributes-externalmethod). The value can also contain [user input](/decision-automation/rule-common-models-valueinputtype) or be expressed as a numeric calculation.
+In both rules the `First Name is equal to "John"` and the `Age is greater than or equal to 18` are called *conditions*. Each condition consists of a *field*, an *operator*, and a *value*. Both the field and the value can be either a property of your [source object](https://codeeffects.com/decision-automation/business-rule-source-object) or a qualified in-rule [method](https://codeeffects.com/decision-automation/rule-common-attributes-method) declared [anywhere](https://codeeffects.com/decision-automation/rule-common-attributes-externalmethod). The value can also contain [user input](https://codeeffects.com/decision-automation/rule-common-models-valueinputtype) or be expressed as a numeric calculation.
 
 The execution type rule can have one or more *rule sections*. Each section starts with a *flow* element: `If`, `Else If`, or `Else`:
 
@@ -29,7 +29,7 @@ Rule conditions may have one or more *logical levels* divided by *logical operat
 
 The rule above has two logical levels — the higher one under the `and` operator, and the lower one under the `or` operator. Both levels contain two conditions (the `or` level is the second condition for the `and` level). Both rule types may have as many nested logical levels as needed, and each level may have one or more conditions.
 
-One feature that is also unique to Code Effects is [Reusable Rules](/decision-automation/business-rules-reusable), which allow you to use any evaluation type rule in any other rules as if it were a `Boolean` field. For example, if we save the following rule under the name `Adult`:
+One feature that is also unique to Code Effects is [Reusable Rules](https://codeeffects.com/decision-automation/business-rules-reusable), which allow you to use any evaluation type rule in any other rules as if it were a `Boolean` field. For example, if we save the following rule under the name `Adult`:
 
 > Check if Age is greater than or equal to 18
 
@@ -61,7 +61,7 @@ editor.ContextMenuRules = new List<MenuItem>
 
 By default, the evaluation of each rule happens the way you would expect: each condition in each section of the rule is evaluated and the entire rule returns `true` as soon as any logical level evaluates to `true`. The evaluator won't attempt to evaluate the rest of the conditions (if any). The rule returns `false` if none of its logical levels evaluate to `true`. Both rule types work this way. The execution rule also invokes its setters and actions and waits for them to complete before returning the result of its evaluation.
 
-But sometimes rules require greater control over the evaluation flow. The [`EvaluationParameter`](/decision-automation/rule-common-models-evaluationparameters) class can be used to define whether each condition in a section, or even each section of a rule, has to be evaluated before the entire rule returns the result. This can be especially useful in execution type rules if you must ensure that all actions of a section are invoked if it returns true, even if the result of the evaluation of the whole rule has already been determined. Consider the following three sections:
+But sometimes rules require greater control over the evaluation flow. The [`EvaluationParameter`](https://codeeffects.com/decision-automation/rule-common-models-evaluationparameters) class can be used to define whether each condition in a section, or even each section of a rule, has to be evaluated before the entire rule returns the result. This can be especially useful in execution type rules if you must ensure that all actions of a section are invoked if it returns true, even if the result of the evaluation of the whole rule has already been determined. Consider the following three sections:
 
 > If Name is "John" then Action 1</br>
 Else if Name is "Alex" or Email ends with "hotmail.com" then Action 2</br>
@@ -87,7 +87,7 @@ If we run this code, actions 1 and 3 will be invoked and the `result` value will
 
 ## Rulesets
 
-As mentioned in [Engine Implementation](/decision-automation/business-rules-engine-implementation) and [Rule XML](/decision-automation/business-rules-storage) articles, rules can be combined into large rulesets if you need to evaluate any number of different rules referring to the same source object against the same set of data. That improves performance because all your rules are compiled only once:
+As mentioned in [Engine Implementation](https://codeeffects.com/decision-automation/business-rules-engine-implementation) and [Rule XML](https://codeeffects.com/decision-automation/business-rules-storage) articles, rules can be combined into large rulesets if you need to evaluate any number of different rules referring to the same source object against the same set of data. That improves performance because all your rules are compiled only once:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -112,13 +112,13 @@ As mentioned in [Engine Implementation](/decision-automation/business-rules-engi
 </codeeffects>
 ```
 
-The default behavior of the engine is to evaluate all rules in the ruleset regardless of the overall outcome; this is logically opposite to the default settings of the rule section evaluation behavior. If you need to evaluate each rule in the order they are listed in the ruleset and return `true` as soon as any of them evaluates to `true`, disregarding setters and actions of the rest of the rules, get an instance of the same [`EvaluationParameters`](/decision-automation/rule-common-models-evaluationparameters) class but this time use its `Scope` property and set its value to `EvaluationScope.AtLeastOne`.
+The default behavior of the engine is to evaluate all rules in the ruleset regardless of the overall outcome; this is logically opposite to the default settings of the rule section evaluation behavior. If you need to evaluate each rule in the order they are listed in the ruleset and return `true` as soon as any of them evaluates to `true`, disregarding setters and actions of the rest of the rules, get an instance of the same [`EvaluationParameters`](https://codeeffects.com/decision-automation/rule-common-models-evaluationparameters) class but this time use its `Scope` property and set its value to `EvaluationScope.AtLeastOne`.
 
 ## Evaluators
 
-Code Effects employs two classes and multiple overloads of the extension `Evaluate(..)` and `Filter(..)` methods for rule evaluation and [data filtering](/decision-automation/business-rule-data-filtering).
+Code Effects employs two classes and multiple overloads of the extension `Evaluate(..)` and `Filter(..)` methods for rule evaluation and [data filtering](https://codeeffects.com/decision-automation/business-rule-data-filtering).
 
-- [`Evaluator`](/decision-automation/rule-engine-evaluator) and [`Evaluator<TSource>`](/decision-automation/rule-engine-evaluator-generic) classes are designed to evaluate or filter large amounts of data against large rulesets or queries.
+- [`Evaluator`](https://codeeffects.com/decision-automation/rule-engine-evaluator) and [`Evaluator<TSource>`](https://codeeffects.com/decision-automation/rule-engine-evaluator-generic) classes are designed to evaluate or filter large amounts of data against large rulesets or queries.
 
     ```csharp
     var evaluator = new Evaluator<SourceObjectType>(ruleXmlString);
@@ -128,10 +128,10 @@ Code Effects employs two classes and multiple overloads of the extension `Evalua
         bool success = evaluator.Evaluate(record);
     ```
 
-- [Extension Methods](/decision-automation/rule-engine-ruleextensions) are designed for cases when you just need to evaluate a number of records against a single rule or a small ruleset.
+- [Extension Methods](https://codeeffects.com/decision-automation/rule-engine-ruleextensions) are designed for cases when you just need to evaluate a number of records against a single rule or a small ruleset.
 
     ```csharp
     bool success = sourceInstance.Evaluate(ruleXmlString);
     ```
 
-The Code Effects evaluation engine is an extremely fast business rules engine that is capable of evaluating millions of source objects against a rule in a matter of milliseconds. Because the business needs of organizations and industries can have unforeseeable differences, Code Effects engine attempts to be as forgiving as possible, allowing developers to use many kinds of scenarios, and throwing exceptions only when the result of rule evaluation is clearly unpredictable. For example, it allows comparisons of different .NET [numeric types](/decision-automation/business-rules-data-types) without asking developers for explicit boxing or type conversion. It also provides internal type conversion between nullable and regular types when preparing the [source](/decision-automation/business-rule-source-object) for evaluation.
+The Code Effects evaluation engine is an extremely fast business rules engine that is capable of evaluating millions of source objects against a rule in a matter of milliseconds. Because the business needs of organizations and industries can have unforeseeable differences, Code Effects engine attempts to be as forgiving as possible, allowing developers to use many kinds of scenarios, and throwing exceptions only when the result of rule evaluation is clearly unpredictable. For example, it allows comparisons of different .NET [numeric types](https://codeeffects.com/decision-automation/business-rules-data-types) without asking developers for explicit boxing or type conversion. It also provides internal type conversion between nullable and regular types when preparing the [source](https://codeeffects.com/decision-automation/business-rule-source-object) for evaluation.

@@ -23,4 +23,4 @@ public enum EvaluationScope
 
 ## Remarks
 
-Refer to the Remarks section of the [`EvaluationParameters`](/decision-automation/rule-common-models-evaluationparameters) class for usage details of this enumeration.
+Refer to the Remarks section of the [`EvaluationParameters`](https://codeeffects.com/decision-automation/rule-common-models-evaluationparameters) class for usage details of this enumeration.

@@ -31,7 +31,7 @@ The most efficient way to add rule elements, select menu items, or navigate an e
 
 ## User Gesture Support on Mobile Devices
 
-The [Rule Editor](/decision-automation/business-rule-editor) also supports tap and swipe gestures for rule authoring on mobile devices. All gestures must originate from the Rule Area. Swiping in the Rule Area also disables standard scrolling to ensure accuracy during rule construction.
+The [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) also supports tap and swipe gestures for rule authoring on mobile devices. All gestures must originate from the Rule Area. Swiping in the Rule Area also disables standard scrolling to ensure accuracy during rule construction.
 
 - **Short tap on a rule element**: Selects that element and opens a context menu showing source properties and methods of the same type (or return type). This mirrors a mouse click on a rule element.
 - **Short tap on the Rule Area (empty space)**: Selects the last element in the tapped line and opens a list of properties or methods for replacement. This mirrors a mouse click on an empty part of the Rule Area.

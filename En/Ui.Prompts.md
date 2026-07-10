@@ -1,11 +1,11 @@
 ﻿
 # AI Prompts in Code Effects
 
-Version 6 introduces AI Prompts as part of the [new BYOAI](/content/ai-powered-business-rules-engine) (Bring Your Own AI) architecture in Code Effects decision platform.
+Version 6 introduces AI Prompts as part of the [new BYOAI](https://codeeffects.com/content/ai-powered-business-rules-engine) (Bring Your Own AI) architecture in Code Effects decision platform.
 
 The feature allows organizations to integrate AI inference directly into deterministic business rules using any AI model, provider, or infrastructure of their choice.
 
-AI Prompts are implemented through the new `Prompt` property available on string-based rule elements. When enabled, the editor automatically displays a dedicated Prompt dialog for long-form structured input during rule authoring. The resulting prompt value can then be passed directly into [in-rule methods](/decision-automation/rule-common-attributes-method) or [rule actions](/decision-automation/rule-common-attributes-action) that communicate with external AI systems.
+AI Prompts are implemented through the new `Prompt` property available on string-based rule elements. When enabled, the editor automatically displays a dedicated Prompt dialog for long-form structured input during rule authoring. The resulting prompt value can then be passed directly into [in-rule methods](https://codeeffects.com/decision-automation/rule-common-attributes-method) or [rule actions](https://codeeffects.com/decision-automation/rule-common-attributes-action) that communicate with external AI systems.
 
 ## Overview
 
@@ -33,7 +33,7 @@ without coupling the rules engine to any vendor-specific AI architecture.
 
 ## The Prompt Property
 
-The AI Prompts feature is enabled through the `Prompt` property available on string-based fields, method parameters, and method return values. It works with all supported source types, including [Reflection](/decision-automation/business-rule-source-object-class), [SourceXML](/decision-automation/business-rule-source-object-xml), and [Adaptive Source](/decision-automation/business-rule-adaptive-source). Examples:
+The AI Prompts feature is enabled through the `Prompt` property available on string-based fields, method parameters, and method return values. It works with all supported source types, including [Reflection](https://codeeffects.com/decision-automation/business-rule-source-object-class), [SourceXML](https://codeeffects.com/decision-automation/business-rule-source-object-xml), and [Adaptive Source](https://codeeffects.com/decision-automation/business-rule-adaptive-source). Examples:
 
 ```csharp
 using CodeEffects.Rule.Common.Attributes;
@@ -77,7 +77,7 @@ method.Parameters.Add(parameter);
 
 When this flag is enabled, the editor automatically replaces the standard inline string input with a dedicated Prompt dialog designed for long-form structured text every time user selects the prompted field or parameter from a menu:
 
-![Prompt](/resources/images/doc/promptscreen.jpg)
+![Prompt](https://codeeffects.com/resources/images/doc/promptscreen.jpg)
 
 This dialog supports:
 

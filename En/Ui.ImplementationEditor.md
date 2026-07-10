@@ -96,11 +96,11 @@ Code Effects business rules editor is a **FREE** web-based component and must be
 	```
 ## Remarks
 
-The example above demonstrates the simplest way to configure and render the [Rule Editor](/decision-automation/business-rule-editor) on your page using the [Reflection source model](/decision-automation/business-rule-source-object-class). The Rule Editor offers many additional features and configuration options, so be sure to refer to our online documentation for detailed guidance. If you need assistance with your implementation, please [contact us](/support).
+The example above demonstrates the simplest way to configure and render the [Rule Editor](https://codeeffects.com/decision-automation/business-rule-editor) on your page using the [Reflection source model](https://codeeffects.com/decision-automation/business-rule-source-object-class). The Rule Editor offers many additional features and configuration options, so be sure to refer to our online documentation for detailed guidance. If you need assistance with your implementation, please [contact us](https://codeeffects.com/support).
 
 ## Resources
 
-- [How to Obtain Code Effects](/decision-automation/how-to-obtain-business-rules-engine)
-- [Code Effects Basics](/decision-automation)
-- [Live Demo](/business-rules-engine-demo)
+- [How to Obtain Code Effects](https://codeeffects.com/decision-automation/how-to-obtain-business-rules-engine)
+- [Code Effects Basics](https://codeeffects.com/decision-automation)
+- [Live Demo](https://codeeffects.com/business-rules-engine-demo)
 - [Demo Project Repos](https://github.com/orgs/codeeffects-software/repositories)
