@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36908.2 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "CodeEffects.Rule.Docs", "CodeEffects.Rule.Docs.shproj", "{C2CFA52F-459F-463E-AC06-F8D2A9A2F14E}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2F1597A5-4875-49D5-9BCE-7B72932FE325}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		CodeEffects.Rule.Docs.projitems*{c2cfa52f-459f-463e-ac06-f8d2a9a2f14e}*SharedItemsImports = 13
+	EndGlobalSection
+EndGlobal

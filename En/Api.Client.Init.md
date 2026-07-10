@@ -1,5 +1,5 @@
 
-# Initialization of the Rule Editor
+# Initialization of the Rule Editor.
 
 The [Rule Editor](/decision-automation/business-rule-editor) can be initialized on a web page in one of two ways:
 
